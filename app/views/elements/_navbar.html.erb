@@ -1,4 +1,5 @@
 <nav class="navbar navbar-default" role="navigation">
+
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -7,8 +8,10 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "Moochmap", defined?(root_path) ? root_path : "#", class: "navbar-brand" %>
+    <a class="brand" href="/"> <img style="position:absolute; TOP:16px; LEFT:30px; " SRC="assets/mooch map.png" width="200" height="40"></a>
   </div>
+
+
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="navbar-collapse-1">
@@ -32,7 +35,7 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to image_tag("facebook.png", height: "50", width: "250"), "/users/auth/facebook", id: "sign_in" %></li>
+          <li><%= link_to image_tag("facebook.png", height: "36", width: "200"), "/users/auth/facebook", id: "sign_in" %></li>
         <% end %>
       <% end %>
     </ul>
