@@ -1,29 +1,36 @@
-<h1>Listing mooches</h1>
-
-<table>
+<%- model_class = Mooch -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Mooch %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Description</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @mooches.each do |mooch| %>
       <tr>
+        <td><%= mooch.id %></td>
         <td><%= mooch.description %></td>
-        <td><%= mooch.user %></td>
-        <td><%= link_to 'Show', mooch %></td>
-        <td><%= link_to 'Edit', edit_mooch_path(mooch) %></td>
-        <td><%= link_to 'Destroy', mooch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l mooch.created_at, format: :long %></td>
+        <td>
+          <%= link_to mooch_path(mooch), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to mooch_path(mooch), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Mooch', new_mooch_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_mooch_path,
+            :class => 'btn btn-primary' %>

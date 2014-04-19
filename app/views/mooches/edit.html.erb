@@ -1,6 +1,5 @@
-<h1>Editing mooch</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @mooch %> |
-<%= link_to 'Back', mooches_path %>
+<%- model_class = Mooch -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Mooch %></h1>
+</div>
+<%= render :partial => 'form' %>

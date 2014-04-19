@@ -1,5 +1,6 @@
-<h1>New mooch</h1>
+<%- model_class = Mooch -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => Mooch %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', mooches_path %>
