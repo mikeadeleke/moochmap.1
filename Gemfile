@@ -55,6 +55,7 @@ gem 'bootstrap-sass-extras'
 gem 'binding_of_caller'
 gem 'geocoder'
 gem "pry"
+gem 'aws-sdk', '~> 1.20.0'
 
 group :development do
   gem 'better_errors'
