@@ -53,6 +53,8 @@ gem 'rails_config'
 gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'binding_of_caller'
+gem 'geokit-rails'
+gem "pry"
 
 group :development do
   gem 'better_errors'

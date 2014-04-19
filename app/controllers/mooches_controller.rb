@@ -4,7 +4,7 @@ class MoochesController < ApplicationController
   before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
 
   before_action :set_mooch, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /mooches
   # GET /mooches.json
   def index
@@ -18,6 +18,7 @@ class MoochesController < ApplicationController
 
   # GET /mooches/new
   def new
+    request.remote_ip
     @mooch = current_user.mooches.new
   end
 
@@ -75,6 +76,6 @@ class MoochesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mooch_params
-      params.require(:mooch).permit(:description, :user_id)
+      params.require(:mooch).permit(:description, :user_id, :latitude, :longitude)
     end
 end

@@ -1,7 +1,9 @@
-<% @mooches.each do |mooch| %>
-  <%= mooch.description %>
-  <%=l mooch.created_at, format: :long %>
-<% end %>
+<ul>
+  <% @mooches.each do |mooch| %>
+    <li><%= mooch.description %></li>
+    <li><%= time_ago_in_words(l mooch.created_at) %> ago</li>
+  <% end %>
+</ul>
 
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
