@@ -1,0 +1,2 @@
+module MoochesHelper
+end

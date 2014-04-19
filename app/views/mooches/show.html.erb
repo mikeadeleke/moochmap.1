@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mooch.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @mooch.user %>
+</p>
+
+<%= link_to 'Edit', edit_mooch_path(@mooch) %> |
+<%= link_to 'Back', mooches_path %>
