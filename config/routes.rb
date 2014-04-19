@@ -1,4 +1,6 @@
 Moochmap::Application.routes.draw do
+  get "users/index"
+  get "users/show"
   get "homes/index"
   resources :mooches
 
