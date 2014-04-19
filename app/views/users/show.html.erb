@@ -1,23 +1,22 @@
 <div class="row">
   <div class="col-md-4">
     <ul>
-      <li>
-        <%= image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small") %>
-      </li>
-      <% if @user.username.nil? %>
-        <li><%= link_to "Add a username", edit_user_registration_path %></li>
-      <% else %>
-        <li><%= @user.username %></li>
-      <% end %>
+      <p>
+        <%= image_tag("http://graph.facebook.com/#{@user.uid}/picture?type=small") %>
+      </p>
       <% if @user.bio.nil? %>
-        <li><%= link_to "Add a bio", edit_user_registration_path %></li>
+        <p><%= link_to "Add a bio", edit_user_registration_path %></p>
       <% else %>
-        <li>Bio</li>
+        <p><%= @user.bio %></p>
       <% end %>
     </ul>
   </div>
   <div class="col-md-8">
-    <h2><%= @user.name %></h2>
+      <% if @user.username.nil? %>
+        <h2><%= link_to "Add a username", edit_user_registration_path %></h2>
+      <% else %>
+        <h2><%= "@"+@user.username %> mooches</h2>
+      <% end %>
 
     <% @user.mooches.each do |mooch| %>
       <%= mooch.description %>
