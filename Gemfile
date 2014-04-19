@@ -56,6 +56,7 @@ gem 'binding_of_caller'
 gem 'geocoder'
 gem "pry"
 gem 'aws-sdk', '~> 1.20.0'
+gem 'leaderboard'
 
 group :development do
   gem 'better_errors'
