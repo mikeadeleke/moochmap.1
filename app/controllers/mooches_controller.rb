@@ -18,7 +18,7 @@ class MoochesController < ApplicationController
 
   # GET /mooches/new
   def new
-    @mooch = Mooch.new
+    @mooch = current_user.mooches.new
   end
 
   # GET /mooches/1/edit
@@ -28,7 +28,9 @@ class MoochesController < ApplicationController
   # POST /mooches
   # POST /mooches.json
   def create
-    @mooch = Mooch.new(mooch_params)
+    @mooch = current_user.mooches.new(mooch_params)
+
+
 
     respond_to do |format|
       if @mooch.save
