@@ -4,7 +4,7 @@ class MoochesController < ApplicationController
   before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
 
   before_action :set_mooch, only: [:show, :edit, :update, :destroy]
-  
+
   # GET /mooches
   # GET /mooches.json
   def index
@@ -29,6 +29,8 @@ class MoochesController < ApplicationController
   # POST /mooches
   # POST /mooches.json
   def create
+    request.remote_ip 
+    result = request.location
     @mooch = current_user.mooches.new(mooch_params)
 
 

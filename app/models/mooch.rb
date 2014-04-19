@@ -1,3 +1,3 @@
 class Mooch < ActiveRecord::Base
- acts_as_mappable 
+ geocoded_by :ip
 end

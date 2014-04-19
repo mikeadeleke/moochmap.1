@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419122604) do
+ActiveRecord::Schema.define(version: 20140419151112) do
 
   create_table "mooches", force: true do |t|
     t.string   "description"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "mooches", ["user_id"], name: "index_mooches_on_user_id"
