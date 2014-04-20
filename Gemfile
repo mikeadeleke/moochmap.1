@@ -57,6 +57,8 @@ gem 'geocoder'
 gem "pry"
 gem 'aws-sdk', '~> 1.20.0'
 gem 'leaderboard'
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
 group :development do
   gem 'better_errors'
