@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419151112) do
+ActiveRecord::Schema.define(version: 20140420055715) do
 
   create_table "mooches", force: true do |t|
     t.string   "description"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140419151112) do
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "address"
   end
 
   add_index "mooches", ["user_id"], name: "index_mooches_on_user_id"

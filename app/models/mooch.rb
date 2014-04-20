@@ -1,5 +1,7 @@
 class Mooch < ActiveRecord::Base
- reverse_geocoded_by :latitude, :longitude,
-    :address => :location
- after_validation :reverse_geocode
+ geocoded_by :address,
+    :latitude  => :fetched_latitude,  # this will be overridden by the below
+    :longitude => :fetched_longitude  # same here
+
+ reverse_geocoded_by :latitude, :longitude
 end

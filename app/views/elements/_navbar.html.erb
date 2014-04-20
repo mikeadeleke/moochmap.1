@@ -20,9 +20,9 @@
     <ul class="nav navbar-nav navbar-right">
       <% if defined?(Devise) %>
         <% if user_signed_in? %>
-          <li><%= link_to "Recent Mooches", mooches_path %></li>
+          <li><%= link_to "Recent Mooching", mooches_path %></li>
           <li><%= link_to "Leaderboard", "#" %></li>
-          <li><%= link_to "New Mooch", new_mooch_path %></li>
+          <li><%= link_to "New Mooching", new_mooch_path %></li>
           <li>
             <%= link_to image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small"), @user %>
           </li>
