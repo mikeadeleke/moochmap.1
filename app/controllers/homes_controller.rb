@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
   def index
     request.remote_ip
-    @mooches = Mooch.all
+    @recent_mooches = Mooch.limit(5)
   end
 end
