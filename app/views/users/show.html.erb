@@ -12,11 +12,7 @@
     </ul>
   </div>
   <div class="col-md-8">
-      <% if @user.username.nil? %>
-        <h2><%= link_to "Add a username", edit_user_registration_path %></h2>
-      <% else %>
-        <h2><%= "@"+@user.username %> mooches</h2>
-      <% end %>
+    <h2><%= @user.name %></h2>
 
     <% @user.mooches.each do |mooch| %>
       <%= mooch.description %>

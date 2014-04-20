@@ -1,0 +1,73 @@
+Searching 307 files for "mooch "
+
+/Users/madeleke13/Projects/hack-psu/moochmap.1/app/controllers/mooches_controller.rb:
+   20    def new
+   21      request.remote_ip
+   22:     @mooch = current_user.mooches.new
+   23    end
+   24  
+   ..
+   32      request.remote_ip 
+   33      result = request.location
+   34:     @mooch = current_user.mooches.new(mooch_params)
+   35  
+   36  
+   ..
+   38      respond_to do |format|
+   39        if @mooch.save
+   40:         format.html { redirect_to @mooch, notice: 'Mooch was successfully created.' }
+   41:         format.json { render action: 'show', status: :created, location: @mooch }
+   42        else
+   43          format.html { render action: 'new' }
+   ..
+   52      respond_to do |format|
+   53        if @mooch.update(mooch_params)
+   54:         format.html { redirect_to @mooch, notice: 'Mooch was successfully updated.' }
+   55          format.json { head :no_content }
+   56        else
+   ..
+   74      # Use callbacks to share common setup or constraints between actions.
+   75      def set_mooch
+   76:       @mooch = Mooch.find(params[:id])
+   77      end
+   78  
+
+/Users/madeleke13/Projects/hack-psu/moochmap.1/app/models/mooch.rb:
+    1: class Mooch < ActiveRecord::Base
+    2   geocoded_by :ip
+    3  end
+
+/Users/madeleke13/Projects/hack-psu/moochmap.1/app/views/mooches/edit.html.erb:
+    1: <%- model_class = Mooch -%>
+    2  <div class="page-header">
+    3:   <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Mooch %></h1>
+    4  </div>
+    5  <%= render :partial => 'form' %>
+
+/Users/madeleke13/Projects/hack-psu/moochmap.1/app/views/mooches/new.html.erb:
+    1: <%- model_class = Mooch -%>
+    2  <div class="page-header">
+    3:   <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => Mooch %></h1>
+    4  </div>
+    5  <%= render :partial => 'form' %>
+
+/Users/madeleke13/Projects/hack-psu/moochmap.1/app/views/mooches/show.html.erb:
+    1: <%- model_class = Mooch -%>
+    2  <div class="page-header">
+    3:   <h1><%=t '.title', :default => Mooch %></h1>
+    4  </div>
+    5  
+
+/Users/madeleke13/Projects/hack-psu/moochmap.1/test/controllers/mooches_controller_test.rb:
+    3  class MoochesControllerTest < ActionController::TestCase
+    4    setup do
+    5:     @mooch = mooches(:one)
+    6    end
+    7  
+
+14 matches across 6 files
+
+
+Searching 307 files for "mooch map"
+
+0 matches across 0 files
