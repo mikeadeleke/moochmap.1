@@ -3,9 +3,42 @@
 $brand-primary: #ee2a26;
 $body-bg: #efefee;
 $text-color: #333332;
-$navbar-default-bg: white;
-.navbar {
-    margin-bottom: 1;
+$navbar-default-bg: #ecf0f1;
 
-    box-shadow: 10px 10px 5px #888888;
+.container{
+	background: white;
+	margin-right: 0;
+	margin-left:0;
+	width:100%;
+
+}
+
+footer{
+	background: red;
+	margin: 0;
+	width:100%;
+
+}
+
+.navbar {
+    margin-bottom: 5px;
+    box-shadow: 10px 5px 5px #888888;
   }
+
+.marketing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
