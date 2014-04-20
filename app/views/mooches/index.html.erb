@@ -1,12 +1,16 @@
-<ul>
+<div class="row">
   <% @mooches.each do |mooch| %>
+  <ul>
+    <div class="col-md-4">
     <li><%= link_to image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small"), @user %> <%= mooch.description %></li>
-    <li><%= time_ago_in_words(l mooch.created_at) %> ago</li>
-    <li><%= mooch.address %></li>
-  <% end %>
-</ul>
-
+    </div>
+    <div class="col-md-8">
+      <li><%= time_ago_in_words(l mooch.created_at) %> ago</li>
+      <li><%= mooch.address %></li>
+    </div>
+  </ul>
+</div>
+<% end %>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_mooch_path,
-            :class => 'btn btn-primary' %>

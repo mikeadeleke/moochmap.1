@@ -53,7 +53,7 @@ function setMarkers(map, locations) {
   // increase in the X direction to the right and in
   // the Y direction down.
   var image = {
-    url: 'assets/penn-ivy.jpeg',
+    url: 'assets/pin.png',
     // This marker is 20 pixels wide by 32 pixels tall.
     size: new google.maps.Size(20, 32),
     // The origin for this image is 0,0.
@@ -89,38 +89,23 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
-
-<!--
-<div id = "overlay">
-  <div class="container">
-    <h1>Hello, world!</h1>
-    <p>...</p>
-    <p><a class="btn btn-primary btn-lg" role="button">Pin</a></p>
-  </div>
-</div>
--->
-
     <div id="map-canvas"></div>
-
-     <input id="latitude" type="text" /><input id="longitude" type="text" />
-
-
   </body>
 </html>
 
-
-    <div id="map-canvas"></div>
-    <ul>
-      <% @recent_mooches.each do |mooch| %>
-      <li><%= link_to image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small"), @user %> <%= mooch.description %></li>
-      <li><%= time_ago_in_words(l mooch.created_at) %> ago</li>
-      <li><%= mooch.address %></li>
-    <% end %>
+  <h2>Mooch City</h2>
+  <ul>
+    <% @recent_mooches.each do |mooch| %>
+    <li><%= link_to image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small"), @user %> <%= mooch.description %></li>
+    <li><%= time_ago_in_words(l mooch.created_at) %> ago</li>
+    <li><%= mooch.address %></li>
   </ul>
-  </body>
-</html>
+  <% end %>
+
+
 
 <% else %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -175,7 +160,7 @@ function setMarkers(map, locations) {
   // increase in the X direction to the right and in
   // the Y direction down.
   var image = {
-    url: 'assets/five.png',
+    url: 'assets/pin.png',
     // This marker is 20 pixels wide by 32 pixels tall.
     size: new google.maps.Size(10, 15),
     // The origin for this image is 0,0.

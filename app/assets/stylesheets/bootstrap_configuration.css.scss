@@ -63,6 +63,20 @@ $navbar-default-bg: #ecf0f1;
   font-weight:bold;
 }
 
+.row ul {
+  text-decoration: none;
+  display: none;
+  list-style-type: none;
+}
+
+.row li {
+  text-decoration: none;
+  display: none;
+  list-style-type: none;
+}
+
+
+
 footer{
 	background: grey;
 	margin: 0;
