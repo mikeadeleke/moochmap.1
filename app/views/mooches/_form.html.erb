@@ -4,6 +4,8 @@
     <div class="col-md-10">
       <%= f.text_field :description, :class => 'text-field form-control' %>
     </div>
+    <%= f.hidden_field :latitude, id: "latitude" %>
+    <%= f.hidden_field :longitude, id: "longitude" %>
   </div>
 
   <div class="form-group">

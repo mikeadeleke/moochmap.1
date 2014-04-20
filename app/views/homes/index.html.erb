@@ -1,9 +1,9 @@
 <script type="text/javascript">
-  navigator.geolocation.getCurrentPosition(GetLocation);
   function GetLocation(location) {
       console.log(location.coords.latitude);
       console.log(location.coords.longitude);
-      console.log(location.coords.accuracy);
+      document.getElementById('latitude').value = location.coords.latitude;
+      document.getElementById('longitude').value = location.coords.longitude;
   }
 </script>
 
@@ -93,6 +93,7 @@ function setMarkers(map, locations) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+navigator.geolocation.getCurrentPosition(GetLocation);
 
     </script>
   </head>
