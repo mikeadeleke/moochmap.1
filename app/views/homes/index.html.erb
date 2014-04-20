@@ -1,3 +1,13 @@
+<script type="text/javascript">
+  navigator.geolocation.getCurrentPosition(GetLocation);
+  function GetLocation(location) {
+      console.log(location.coords.latitude);
+      console.log(location.coords.longitude);
+      console.log(location.coords.accuracy);
+  }
+</script>
+
+
 <% if signed_in? %>
 <!DOCTYPE html>
 <html>
@@ -6,12 +16,14 @@
     <meta charset="utf-8">
     <style>
       html, body, #map-canvas {
-        height: 400px;
+        height: 500px;
         margin: 0px;
         padding: 0px
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    
+
     <script>
 // The following example creates complex markers to indicate beaches near
 // Sydney, NSW, Australia. Note that the anchor is set to
@@ -20,7 +32,7 @@
 function initialize() {
   var mapOptions = {
     zoom: 18,
-     center: new google.maps.LatLng("<%= @recent_mooches.first.latitude %>", "<%= @recent_mooches.first.longitude %>")
+    center: new google.maps.LatLng(37.2225592, -80.41949240000001)
   }
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -53,7 +65,7 @@ function setMarkers(map, locations) {
   // increase in the X direction to the right and in
   // the Y direction down.
   var image = {
-    url: 'assets/pin.png',
+    url: 'assets/penn-ivy.jpeg',
     // This marker is 20 pixels wide by 32 pixels tall.
     size: new google.maps.Size(20, 32),
     // The origin for this image is 0,0.
@@ -92,28 +104,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div id="map-canvas"></div>
   </body>
 </html>
-
-  <h2>Mooch City</h2>
-  <ul>
-    <% @recent_mooches.each do |mooch| %>
-    <li><%= link_to image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small"), @user %> <%= mooch.description %></li>
-    <li><%= time_ago_in_words(l mooch.created_at) %> ago</li>
-    <li><%= mooch.address %></li>
-  </ul>
-  <% end %>
-
-
-
 <% else %>
-
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
       html, body, #map-canvas {
-        height: 400px;
+        height: 375px;
         margin: 0px;
         padding: 0px
       }
@@ -127,9 +126,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 function initialize() {
   var mapOptions = {
     zoom: 18,
-      center: new google.maps.LatLng("<%= @recent_mooches.first.latitude %>", "<%= @recent_mooches.first.longitude %>")
+    center: new google.maps.LatLng(37.2225592, -80.41949240000001)
   }
-
   var map = new google.maps.Map(document.getElementById('map-canvas'),
                                 mapOptions);
 
@@ -141,13 +139,13 @@ function initialize() {
  * the order in which these markers should display on top of each
  * other.
  */
-var beaches = [
-  ["<%= @recent_mooches.first.address %>", "<%= @recent_mooches.first.latitude %>", "<%= @recent_mooches.first.longitude %>", 5 ],
-  ["<%= @recent_mooches.second.address %>", "<%= @recent_mooches.second.latitude %>", "<%= @recent_mooches.second.longitude %>", 4],
-  ["<%= @recent_mooches.third.address %>", "<%= @recent_mooches.third.latitude %>", "<%= @recent_mooches.third.longitude %>", 3],
-  ["<%= @recent_mooches.fourth.address %>", "<%= @recent_mooches.fourth.latitude %>", "<%= @recent_mooches.fourth.longitude %>", 2],
-  ["<%= @recent_mooches.fifth.address %>", "<%= @recent_mooches.fifth.latitude %>", "<%= @recent_mooches.fifth.longitude %>", 1]
-];
+  var beaches = [
+    ["<%= @recent_mooches.first.address %>", "<%= @recent_mooches.first.latitude %>", "<%= @recent_mooches.first.longitude %>", 5 ],
+    ["<%= @recent_mooches.second.address %>", "<%= @recent_mooches.second.latitude %>", "<%= @recent_mooches.second.longitude %>", 4],
+    ["<%= @recent_mooches.third.address %>", "<%= @recent_mooches.third.latitude %>", "<%= @recent_mooches.third.longitude %>", 3],
+    ["<%= @recent_mooches.fourth.address %>", "<%= @recent_mooches.fourth.latitude %>", "<%= @recent_mooches.fourth.longitude %>", 2],
+    ["<%= @recent_mooches.fifth.address %>", "<%= @recent_mooches.fifth.latitude %>", "<%= @recent_mooches.fifth.longitude %>", 1]
+  ];
 
 function setMarkers(map, locations) {
   // Add markers to the map
@@ -160,9 +158,9 @@ function setMarkers(map, locations) {
   // increase in the X direction to the right and in
   // the Y direction down.
   var image = {
-    url: 'assets/pin.png',
+    url: 'assets/penn-ivy.jpeg',
     // This marker is 20 pixels wide by 32 pixels tall.
-    size: new google.maps.Size(10, 15),
+    size: new google.maps.Size(20, 32),
     // The origin for this image is 0,0.
     origin: new google.maps.Point(0,0),
     // The anchor for this image is the base of the flagpole at 0,32.
@@ -195,7 +193,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
   </head>
-  <body>
+<body>
     <div id="map-canvas"></div>
 
     
