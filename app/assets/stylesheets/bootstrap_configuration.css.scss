@@ -12,17 +12,27 @@ $navbar-default-bg: #ecf0f1;
 	width:100%;
 
 }
-
-footer{
-	background: red;
-	margin: 0;
-	width:100%;
-
+/*
+.map-canvas{
+  position: absolute;
 }
+#overlay{
+  position: relative;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  padding-left: 600px
+
+}*/
+
+
+
 
 .navbar {
     margin-bottom: 5px;
     box-shadow: 10px 5px 5px #888888;
+    background: url(lightwood.jpeg);
+
   }
 
 .marketing {
@@ -34,6 +44,7 @@ footer{
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;
+   border-right: 1px solid rgb(220, 220, 220);
 }
 .marketing h2 {
   font-weight: normal;
@@ -41,4 +52,24 @@ footer{
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
+
 }
+
+.space-below{
+	margin-top: 40px;
+  margin-bottom: 30px;
+  font-size:30px;
+  text-align:center;
+  font-weight:bold;
+}
+
+footer{
+	background: grey;
+	margin: 0;
+	width:100%;
+	font-size: 15px;
+	text-align: left;
+
+}
+
+
