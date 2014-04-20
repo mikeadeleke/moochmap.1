@@ -8,7 +8,7 @@ class MoochesController < ApplicationController
   # GET /mooches
   # GET /mooches.json
   def index
-    @mooches = Mooch.all
+    @mooches = Mooch.order('created_at DESC').all
   end
 
   # GET /mooches/1
@@ -37,7 +37,7 @@ class MoochesController < ApplicationController
 
     respond_to do |format|
       if @mooch.save
-        format.html { redirect_to @mooch, notice: 'Mooch was successfully created.' }
+        format.html { redirect_to root_url, notice: 'We knew you were a mooch. Everyone knows you are a mooch :)' }
         format.json { render action: 'show', status: :created, location: @mooch }
       else
         format.html { render action: 'new' }
@@ -51,7 +51,7 @@ class MoochesController < ApplicationController
   def update
     respond_to do |format|
       if @mooch.update(mooch_params)
-        format.html { redirect_to @mooch, notice: 'Mooch was successfully updated.' }
+        format.html { redirect_to mooches_url, notice: 'We got that mooch on updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -78,6 +78,6 @@ class MoochesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mooch_params
-      params.require(:mooch).permit(:description, :user_id, :latitude, :longitude)
+      params.require(:mooch).permit(:description, :user_id, :latitude, :longitude, :address)
     end
 end

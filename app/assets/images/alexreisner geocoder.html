@@ -1,0 +1,2613 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class="   ">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>alexreisner/geocoder</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="alexreisner/geocoder" name="twitter:title" /><meta content="geocoder - Complete Ruby geocoding solution." name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/32069?s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/32069?s=400" property="og:image" /><meta content="alexreisner/geocoder" property="og:title" /><meta content="https://github.com/alexreisner/geocoder" property="og:url" /><meta content="geocoder - Complete Ruby geocoding solution." property="og:description" />
+
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="267A439A:33B4:3278C4D:5353644B" name="octolytics-dimension-request_id" /><meta content="3124481" name="octolytics-actor-id" /><meta content="mikeadeleke" name="octolytics-actor-login" /><meta content="372d19ae04bca26f8a9c94da8eedf7976fd1534b96e5e1a62fe8f20d0ad5894a" name="octolytics-actor-hash" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://github.global.ssl.fastly.net/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="hh2Chich9SmZLJJG8iXOxIfKY5pQmRR6BDt2gWJqeTs=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-96f104cca04e50f916e268ebf2d3f7b009e1405e.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-dcc4741ab191e42d5f0e7bc8107928d3afedb6ed.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+        <script crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/frameworks-f8f8d8ee1afb4365ba5e002fdbc3c8e61738713b.js" type="text/javascript"></script>
+        <script async="async" crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/github-3d40051ee9deef4dcbac4b258559962e1ff08bc6.js" type="text/javascript"></script>
+        
+        
+      <meta http-equiv="x-pjax-version" content="c89c1dd3e1fde5b439c014fbbfb28b96">
+
+      
+  <meta name="description" content="geocoder - Complete Ruby geocoding solution." />
+
+  <meta content="32069" name="octolytics-dimension-user_id" /><meta content="alexreisner" name="octolytics-dimension-user_login" /><meta content="176780" name="octolytics-dimension-repository_id" /><meta content="alexreisner/geocoder" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="176780" name="octolytics-dimension-repository_network_root_id" /><meta content="alexreisner/geocoder" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/alexreisner/geocoder/commits/master.atom" rel="alternate" title="Recent Commits to geocoder:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in  env-production macintosh vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+    
+    <a href="/notifications" aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s" data-gotokey="n">
+        <span class="mail-status all-read"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    data-username="mikeadeleke"
+      data-repo="alexreisner/geocoder"
+      data-branch="master"
+      data-sha="6b358ed33f91f9871efffa3080f724dbe0893787"
+  >
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="alexreisner/geocoder" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+            <li><a href="https://gist.github.com">Gist</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="https://help.github.com">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+
+  <ul id="user-links">
+    <li>
+      <a href="/mikeadeleke" class="name">
+        <img alt="Mike Adeleke" class=" js-avatar" data-user="3124481" height="20" src="https://avatars1.githubusercontent.com/u/3124481?s=140" width="20" /> mikeadeleke
+      </a>
+    </li>
+
+    <li class="new-menu dropdown-toggle js-menu-container">
+      <a href="#" class="js-menu-target tooltipped tooltipped-s" aria-label="Create new...">
+        <span class="octicon octicon-plus"></span>
+        <span class="dropdown-arrow"></span>
+      </a>
+
+      <div class="new-menu-content js-menu-content">
+      </div>
+    </li>
+
+    <li>
+      <a href="/settings/profile" id="account_settings"
+        class="tooltipped tooltipped-s"
+        aria-label="Account settings ">
+        <span class="octicon octicon-tools"></span>
+      </a>
+    </li>
+    <li>
+      <form class="logout-form" action="/logout" method="post">
+        <button class="sign-out-button tooltipped tooltipped-s" aria-label="Sign out">
+          <span class="octicon octicon-log-out"></span>
+        </button>
+      </form>
+    </li>
+
+  </ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="section-title">
+      <span title="alexreisner/geocoder">This repository</span>
+    </li>
+      <li>
+        <a href="/alexreisner/geocoder/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="hh2Chich9SmZLJJG8iXOxIfKY5pQmRR6BDt2gWJqeTs=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="176780" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="/alexreisner/geocoder/watchers">
+        84
+      </a>
+      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye-watch"></span>
+          Watch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="octicon octicon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for conversations in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-watch"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-unwatch"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+  
+
+  <div class="js-toggler-container js-social-container starring-container ">
+    <a href="/alexreisner/geocoder/unstar"
+      class="minibutton with-count js-toggler-target star-button starred"
+      aria-label="Unstar this repository" title="Unstar alexreisner/geocoder" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
+    </a>
+
+    <a href="/alexreisner/geocoder/star"
+      class="minibutton with-count js-toggler-target star-button unstarred"
+      aria-label="Star this repository" title="Star alexreisner/geocoder" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star"></span><span class="text">Star</span>
+    </a>
+
+      <a class="social-count js-social-count" href="/alexreisner/geocoder/stargazers">
+        2,404
+      </a>
+  </div>
+
+  </li>
+
+
+        <li>
+          <a href="/alexreisner/geocoder/fork" class="minibutton with-count js-toggler-target fork-button lighter tooltipped-n" title="Fork your own copy of alexreisner/geocoder to your account" aria-label="Fork your own copy of alexreisner/geocoder to your account" rel="facebox nofollow">
+            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
+          </a>
+          <a href="/alexreisner/geocoder/network" class="social-count">532</a>
+        </li>
+
+
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/alexreisner" class="url fn" itemprop="url" rel="author"><span itemprop="title">alexreisner</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/alexreisner/geocoder" class="js-current-repository js-repo-home-link">geocoder</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline with-full-navigation ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="/alexreisner/geocoder" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /alexreisner/geocoder">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="/alexreisner/geocoder/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /alexreisner/geocoder/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>22</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="/alexreisner/geocoder/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /alexreisner/geocoder/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>5</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="/alexreisner/geocoder/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_wiki /alexreisner/geocoder/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="/alexreisner/geocoder/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /alexreisner/geocoder/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="/alexreisner/geocoder/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /alexreisner/geocoder/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="/alexreisner/geocoder/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /alexreisner/geocoder/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/alexreisner/geocoder.git" readonly="readonly">
+
+    <span aria-label="copy to clipboard" class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/alexreisner/geocoder.git" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="ssh"
+  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="git@github.com:alexreisner/geocoder.git" readonly="readonly">
+
+    <span aria-label="copy to clipboard" class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:alexreisner/geocoder.git" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/alexreisner/geocoder" readonly="readonly">
+
+    <span aria-label="copy to clipboard" class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/alexreisner/geocoder" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+  <a href="http://mac.github.com" data-url="github-mac://openRepo/https://github.com/alexreisner/geocoder" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save alexreisner/geocoder to your computer and use it in GitHub Desktop." aria-label="Save alexreisner/geocoder to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="/alexreisner/geocoder/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download alexreisner/geocoder as a zip file"
+                   title="Download alexreisner/geocoder as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description js-details-show">
+      <p>Complete Ruby geocoding solution.</p>
+    </div>
+
+    <div class="repository-website js-details-show">
+      <p><a href="http://www.rubygeocoder.com" rel="nofollow">http://www.rubygeocoder.com</a></p>
+    </div>
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/alexreisner/geocoder/commits/master">
+            <span class="num">
+              <span class="octicon octicon-history"></span>
+              1,213
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/alexreisner/geocoder/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            5
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/alexreisner/geocoder/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            41
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/alexreisner/geocoder/graphs/contributors">
+    <span class="num">
+      <span class="octicon octicon-organization"></span>
+      132
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/alexreisner/geocoder/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">100%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped tooltipped-s" aria-label="Show language statistics">
+    <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats"
+     style="background-color:#701516">
+  <span class="language-color" style="width:100%; background-color:#701516;" itemprop="keywords">Ruby</span>
+    </a>
+  </div>
+
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/alexreisner/geocoder/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped tooltipped-s" aria-label="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/character-encoding"
+                 data-name="character-encoding"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="character-encoding">character-encoding</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/fix_mongoid_nearbys"
+                 data-name="fix_mongoid_nearbys"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="fix_mongoid_nearbys">fix_mongoid_nearbys</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/rails2"
+                 data-name="rails2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="rails2">rails2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/rails-geocoder"
+                 data-name="rails-geocoder"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="rails-geocoder">rails-geocoder</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/v1.2.0"
+                 data-name="v1.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.2.0">v1.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/v1.1.9"
+                 data-name="v1.1.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.1.9">v1.1.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.8"
+                 data-name="1.1.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.8">1.1.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.7"
+                 data-name="1.1.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.7">1.1.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.6"
+                 data-name="1.1.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.6">1.1.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.5"
+                 data-name="1.1.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.5">1.1.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.4"
+                 data-name="1.1.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.4">1.1.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.3"
+                 data-name="1.1.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.3">1.1.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.2"
+                 data-name="1.1.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.2">1.1.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.1"
+                 data-name="1.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.1">1.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.1.0"
+                 data-name="1.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.1.0">1.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.0.5"
+                 data-name="1.0.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0.5">1.0.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.0.4"
+                 data-name="1.0.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0.4">1.0.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.0.3"
+                 data-name="1.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0.3">1.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.0.2"
+                 data-name="1.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0.2">1.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.0.1"
+                 data-name="1.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0.1">1.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/1.0.0"
+                 data-name="1.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="1.0.0">1.0.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.13"
+                 data-name="0.9.13"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.13">0.9.13</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.12"
+                 data-name="0.9.12"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.12">0.9.12</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.11"
+                 data-name="0.9.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.11">0.9.11</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.10"
+                 data-name="0.9.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.10">0.9.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.9"
+                 data-name="0.9.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.9">0.9.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.8"
+                 data-name="0.9.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.8">0.9.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.7"
+                 data-name="0.9.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.7">0.9.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.6"
+                 data-name="0.9.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.6">0.9.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.5"
+                 data-name="0.9.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.5">0.9.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.4"
+                 data-name="0.9.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.4">0.9.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.3"
+                 data-name="0.9.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.3">0.9.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.2"
+                 data-name="0.9.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.2">0.9.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.1"
+                 data-name="0.9.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.1">0.9.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.9.0"
+                 data-name="0.9.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.9.0">0.9.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.9"
+                 data-name="0.8.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.9">0.8.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.8"
+                 data-name="0.8.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.8">0.8.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.7"
+                 data-name="0.8.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.7">0.8.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.6"
+                 data-name="0.8.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.6">0.8.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.5"
+                 data-name="0.8.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.5">0.8.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.4"
+                 data-name="0.8.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.4">0.8.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.3"
+                 data-name="0.8.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.3">0.8.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.2"
+                 data-name="0.8.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.2">0.8.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.1"
+                 data-name="0.8.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.1">0.8.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/alexreisner/geocoder/tree/0.8.0"
+                 data-name="0.8.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="0.8.0">0.8.0</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/alexreisner/geocoder" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">geocoder</span></a></span></span><span class="separator"> / </span><form action="/alexreisner/geocoder/new/master" aria-label="Fork this project and create a new file" class="js-new-blob-form tooltipped tooltipped-e new-file-link" method="post"><span aria-label="Fork this project and create a new file" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/alexreisner/geocoder/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+<div class="bubble files-bubble">
+
+  
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/alexreisner/geocoder/commit/1098046ffd428911f58d18670660485eb78cdebe" class="message" data-pjax="true" title='Merge pull request #637 from jzelenkov/fix-postgres-oid
+
+[2nd try] fixes postgres "unknown OID" warnings'>Merge pull request</a> <a href="https://github.com/alexreisner/geocoder/pull/637" class="issue-link" title='[2nd try] fixes postgres "unknown OID" warnings'>#637</a> <a href="/alexreisner/geocoder/commit/1098046ffd428911f58d18670660485eb78cdebe" class="message" data-pjax="true" title='Merge pull request #637 from jzelenkov/fix-postgres-oid
+
+[2nd try] fixes postgres "unknown OID" warnings'>from jzelenkov/fix-postgres-oid</a>
+        <span class="hidden-text-expander inline"><a href="#" class="js-details-target">…</a></span>
+    </p>
+      <div class="commit-desc"><pre>[2nd try] fixes postgres "unknown OID" warnings</pre></div>
+    <div class="commit-meta">
+      <span aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="1098046ffd428911f58d18670660485eb78cdebe" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+      <a href="/alexreisner/geocoder/commit/1098046ffd428911f58d18670660485eb78cdebe" class="sha-block" data-pjax>latest commit <span class="sha">1098046ffd</span></a>
+
+      <div class="authorship">
+        <img alt="Alex Reisner" class="gravatar js-avatar" data-user="32069" height="20" src="https://avatars1.githubusercontent.com/u/32069?s=140" width="20" />
+        <span class="author-name"><a href="/alexreisner" data-skip-pjax="true" rel="author">alexreisner</a></span>
+        authored <time class="js-relative-date updated" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-04-16T23:05:06-04:00" title="2014-04-16 21:05:06">April 16, 2014</time>
+
+      </div>
+    </div>
+  </div>
+
+  <table class="files" data-pjax>
+
+    
+<tbody class=""
+  data-url="/alexreisner/geocoder/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/tree/master/bin" class="js-directory-link" id="c1111bd512b29e821b120b86446026b8-053c257a5ca70a7abba181416805fc4d1f82c489" title="bin">bin</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/1bd5a78a2528dc8ac70964b20e584a2f15dc19f2" class="message" data-pjax="true" title="Add command line interface.">Add command line interface.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2011-04-22T01:25:39-04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2011-04-22 01:25:39 -0400">April 22, 2011</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/tree/master/examples" class="js-directory-link" id="bfebe34154a0dfd9fc7b447fc9ed74e9-95ade91c297e1a2328a637fb3404572347d62816" title="examples">examples</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/f4263db109e46517746c35e15c3b94cf6bd442a5" class="message" data-pjax="true" title="Fix for https://github.com/alexreisner/geocoder/issues/442#issuecomment-17581959">Fix for</a> <a href="https://github.com/alexreisner/geocoder/issues/442#issuecomment-17581959" class="issue-link" title="Gist with Memcached Cache">#442 (comment)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-05-08T09:41:11+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-05-08 09:41:11 +0200">May 08, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/tree/master/gemfiles" class="js-directory-link" id="ac46a8b5a40536c4171a5ebee5aca2d4-471abea9d197a7b617cac2b1fadba51fdfe12a59" title="gemfiles">gemfiles</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/87b0deebfac7bab3e75da62cae289e7de12f92f2" class="message" data-pjax="true" title="Adding geoip gem to gemfiles/Gemfile.mongoid-2.4.x.
+
+Required for ruby 1.8.7 and 1.9.2 builds on travis.">Adding geoip gem to gemfiles/Gemfile.mongoid-2.4.x.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-05-21T20:43:25-03:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-05-21 20:43:25 -0300">May 21, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/tree/master/lib" class="js-directory-link" id="e8acc63b1e238f3255c900eed37254b8-995a40e780758075ba5335f6ed73a808e85467a3" title="lib">lib</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/1fe561faa91fa1d2fc02fc465956f48579b402d5" class="message" data-pjax="true" title="[2nd try] fixes postgres &quot;unknown OID&quot; warnings">[2nd try] fixes postgres "unknown OID" warnings</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-17T00:30:26+02:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-17 00:30:26 +0200">April 17, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/tree/master/test" class="js-directory-link" id="098f6bcd4621d373cade4e832627b4f6-fc454a0f39e5147d347feb27563c14dd7907e83a" title="test">test</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/64c4e6cde5ad67d7b895f0cdf838e22f10c2e9a7" class="message" data-pjax="true" title="batch size in rake task for large database">batch size in rake task for large database</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-13T13:37:34+04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-13 13:37:34 +0400">April 13, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-a199d36a480ccc4cb736d3a928b4afcbd8d219c3" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/a25e3d7b8ef3dba9954a624b2441b7e018b5f111" class="message" data-pjax="true" title="Add more useful/specific integration tests.">Add more useful/specific integration tests.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-01-29T21:35:21-05:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-01-29 21:35:21 -0500">January 29, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/.travis.yml" class="js-directory-link" id="354f30a63fb0907d4ad57269548329e3-9bda7ee48a9460f775792ae93e5f7312cd5b6cc8" title=".travis.yml">.travis.yml</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/d59ad1b19bf31f8d275ed65d1ef2859dafca8ece" class="message" data-pjax="true" title="Drop support for Ruby 1.8.
+
+This will allow us to address long-standing char encoding issues.">Drop support for Ruby 1.8.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-12-28T14:09:46-05:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-12-28 14:09:46 -0500">December 28, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/CHANGELOG.md" class="js-directory-link" id="4ac32a78649ca5bdd8e0ba38b7006a1e-7a014953bbc9a636afa45ff710a8d37199610f63" title="CHANGELOG.md">CHANGELOG.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/8c06687495f0e8490feb4eb12bad6188c0cdd345" class="message" data-pjax="true" title="Prepare for release of gem version 1.2.0.">Prepare for release of gem version 1.2.0.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-16T14:52:19-04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-16 14:52:19 -0400">April 16, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/Gemfile" class="js-directory-link" id="8b7db4d5cc4b8f6dc8feb7030baa2478-4a38c552834a6d89792745c26d2c18d0c7c700d9" title="Gemfile">Gemfile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/bf0ce01612749ff2f9b79003d4055cfb42f2cc08" class="message" data-pjax="true" title="Unzip archive in platform-independent fashion.">Unzip archive in platform-independent fashion.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-03-16T21:08:54-04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-03-16 21:08:54 -0400">March 16, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-767580ccd5a05f05bc9e10be222c5fc3b3a1a605" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/7167a7875b5e2354bc3b3a6ce9b0ed501c9a0495" class="message" data-pjax="true" title="Update copyright years.">Update copyright years.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2011-03-11T12:36:44-05:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2011-03-11 12:36:44 -0500">March 11, 2011</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-6cc9efff727dac375371c78f9c019b8f15fb299f" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/e9a6658b91088eb6f826249e36f2f97d9f7e0d94" class="message" data-pjax="true" title="Add note about Rails 4.1 and ActiveRecord `count`.">Add note about Rails 4.1 and ActiveRecord `count`.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-04-16T13:52:05-04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-16 13:52:05 -0400">April 16, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-f06367dcd875b4696bbedbbaa9a96ba9b87d22dc" title="Rakefile">Rakefile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/4e25ac281183f9c379a5824b60603fadc447e57e" class="message" data-pjax="true" title="Restructure and clean up lookup tests.">Restructure and clean up lookup tests.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2014-02-07T20:53:21-05:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-02-07 20:53:21 -0500">February 07, 2014</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/geocoder.gemspec" class="js-directory-link" id="7c186c07da8b5697c2cf30f2d1539b06-ed30cdcecb61c8e5b7e71ed8f65f7d3ed248917c" title="geocoder.gemspec">geocoder.gemspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/8e93b3f1107704aec91d70de39ce8622a2e94c52" class="message" data-pjax="true" title="Require date">Require date</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2013-02-11T19:43:47-07:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2013-02-11 19:43:47 -0700">February 11, 2013</local-time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/blob/master/init.rb" class="js-directory-link" id="242d0b4ac43f99fbb7c9023c1aca7166-87883b6226c39d8b4701fdf8b3a9da9c0eade12a" title="init.rb">init.rb</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/alexreisner/geocoder/commit/2753a114557fd32efe73ab8642f5117e11f6d669" class="message" data-pjax="true" title="Move geocoded_by method from init.rb to lib/geocoder.rb.">Move geocoded_by method from init.rb to lib/geocoder.rb.</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><local-time datetime="2009-10-01T11:39:36-04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2009-10-01 11:39:36 -0400">October 01, 2009</local-time></span></td>
+    </tr>
+</tbody>
+
+  </table>
+</div>
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name">
+      <span class="octicon octicon-book"></span>
+      README.md
+    </span>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="user-content-geocoder" class="anchor" href="#geocoder"><span class="octicon octicon-link"></span></a>Geocoder</h1>
+
+<p>Geocoder is a complete geocoding solution for Ruby. With Rails it adds geocoding (by street or IP address), reverse geocoding (find street address based on given coordinates), and distance queries. It's as simple as calling <code>geocode</code> on your objects, and then using a scope like <code>Venue.near("Billings, MT")</code>.</p>
+
+<h2>
+<a name="user-content-compatibility" class="anchor" href="#compatibility"><span class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<ul>
+<li>Supports multiple Ruby versions: Ruby 1.9.2, 1.9.3, 2.0.0, 2.1.0, JRuby and Rubinius.</li>
+<li>Supports multiple databases: MySQL, PostgreSQL, SQLite, and MongoDB (1.7.0 and higher).</li>
+<li>Supports Rails 3 and 4. If you need to use it with Rails 2 please see the <code>rails2</code> branch (no longer maintained, limited feature set).</li>
+<li>Works very well outside of Rails, you just need to install either the <code>json</code> (for MRI) or <code>json_pure</code> (for JRuby) gem.</li>
+</ul><h2>
+<a name="user-content-rails-41-note" class="anchor" href="#rails-41-note"><span class="octicon octicon-link"></span></a>Rails 4.1 Note</h2>
+
+<p>Due to <a href="https://github.com/rails/rails/pull/10710">a change in ActiveRecord's <code>count</code> method</a> you will need to use <code>count(:all)</code> to explicitly count all columns ("*") when using a <code>near</code> scope. Using <code>near</code> and calling <code>count</code> with no argument will cause exceptions in many cases.</p>
+
+<h2>
+<a name="user-content-installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Install Geocoder like any other Ruby gem:</p>
+
+<pre><code>gem install geocoder
+</code></pre>
+
+<p>Or, if you're using Rails/Bundler, add this to your Gemfile:</p>
+
+<pre><code>gem "geocoder"
+</code></pre>
+
+<p>and run at the command prompt:</p>
+
+<pre><code>bundle install
+</code></pre>
+
+<h2>
+<a name="user-content-object-geocoding" class="anchor" href="#object-geocoding"><span class="octicon octicon-link"></span></a>Object Geocoding</h2>
+
+<h3>
+<a name="user-content-activerecord" class="anchor" href="#activerecord"><span class="octicon octicon-link"></span></a>ActiveRecord</h3>
+
+<p>Your model must have two attributes (database columns) for storing latitude and longitude coordinates. By default they should be called <code>latitude</code> and <code>longitude</code> but this can be changed (see "Model Configuration" below):</p>
+
+<pre><code>rails generate migration AddLatitudeAndLongitudeToModel latitude:float longitude:float
+rake db:migrate
+</code></pre>
+
+<p>For reverse geocoding your model must provide a method that returns an address. This can be a single attribute, but it can also be a method that returns a string assembled from different attributes (eg: <code>city</code>, <code>state</code>, and <code>country</code>).</p>
+
+<p>Next, your model must tell Geocoder which method returns your object's geocodable address:</p>
+
+<pre><code>geocoded_by :full_street_address   # can also be an IP address
+after_validation :geocode          # auto-fetch coordinates
+</code></pre>
+
+<p>For reverse geocoding, tell Geocoder which attributes store latitude and longitude:</p>
+
+<pre><code>reverse_geocoded_by :latitude, :longitude
+after_validation :reverse_geocode  # auto-fetch address
+</code></pre>
+
+<h3>
+<a name="user-content-mongoid" class="anchor" href="#mongoid"><span class="octicon octicon-link"></span></a>Mongoid</h3>
+
+<p>First, your model must have an array field for storing coordinates:</p>
+
+<pre><code>field :coordinates, :type =&gt; Array
+</code></pre>
+
+<p>You may also want an address field, like this:</p>
+
+<pre><code>field :address
+</code></pre>
+
+<p>but if you store address components (city, state, country, etc) in separate fields you can instead define a method called <code>address</code> that combines them into a single string which will be used to query the geocoding service.</p>
+
+<p>Once your fields are defined, include the <code>Geocoder::Model::Mongoid</code> module and then call <code>geocoded_by</code>:</p>
+
+<pre><code>include Geocoder::Model::Mongoid
+geocoded_by :address               # can also be an IP address
+after_validation :geocode          # auto-fetch coordinates
+</code></pre>
+
+<p>Reverse geocoding is similar:</p>
+
+<pre><code>include Geocoder::Model::Mongoid
+reverse_geocoded_by :coordinates
+after_validation :reverse_geocode  # auto-fetch address
+</code></pre>
+
+<p>Once you've set up your model you'll need to create the necessary spatial indices in your database:</p>
+
+<pre><code>rake db:mongoid:create_indexes
+</code></pre>
+
+<p>Be sure to read <em>Latitude/Longitude Order</em> in the <em>Notes on MongoDB</em> section below on how to properly retrieve latitude/longitude coordinates from your objects.</p>
+
+<h3>
+<a name="user-content-mongomapper" class="anchor" href="#mongomapper"><span class="octicon octicon-link"></span></a>MongoMapper</h3>
+
+<p>MongoMapper is very similar to Mongoid, just be sure to include <code>Geocoder::Model::MongoMapper</code>.</p>
+
+<h3>
+<a name="user-content-mongo-indices" class="anchor" href="#mongo-indices"><span class="octicon octicon-link"></span></a>Mongo Indices</h3>
+
+<p>By default, the methods <code>geocoded_by</code> and <code>reverse_geocoded_by</code> create a geospatial index. You can avoid index creation with the <code>:skip_index option</code>, for example:</p>
+
+<pre><code>include Geocoder::Model::Mongoid
+geocoded_by :address, :skip_index =&gt; true
+</code></pre>
+
+<h3>
+<a name="user-content-bulk-geocoding" class="anchor" href="#bulk-geocoding"><span class="octicon octicon-link"></span></a>Bulk Geocoding</h3>
+
+<p>If you have just added geocoding to an existing application with a lot of objects you can use this Rake task to geocode them all:</p>
+
+<pre><code>rake geocode:all CLASS=YourModel
+</code></pre>
+
+<p>Geocoder will print warnings if you exceed the rate limit for your geocoding service. Some services — Google notably — enforce a per-second limit in addition to a per-day limit. To avoid exceeding the per-second limit, you can add a <code>SLEEP</code> option to pause between requests for a given amount of time. You can also load objects in batches to save memory, for example:</p>
+
+<pre><code>rake geocode:all CLASS=YourModel SLEEP=0.25 BATCH=100
+</code></pre>
+
+<h3>
+<a name="user-content-avoiding-unnecessary-api-requests" class="anchor" href="#avoiding-unnecessary-api-requests"><span class="octicon octicon-link"></span></a>Avoiding Unnecessary API Requests</h3>
+
+<p>Geocoding only needs to be performed under certain conditions. To avoid unnecessary work (and quota usage) you will probably want to geocode an object only when:</p>
+
+<ul>
+<li>an address is present</li>
+<li>the address has been changed since last save (or it has never been saved)</li>
+</ul><p>The exact code will vary depending on the method you use for your geocodable string, but it would be something like this:</p>
+
+<pre><code>after_validation :geocode, if: -&gt;(obj){ obj.address.present? and obj.address_changed? }
+</code></pre>
+
+<h2>
+<a name="user-content-request-geocoding-by-ip-address" class="anchor" href="#request-geocoding-by-ip-address"><span class="octicon octicon-link"></span></a>Request Geocoding by IP Address</h2>
+
+<p>Geocoder adds a <code>location</code> method to the standard <code>Rack::Request</code> object so you can easily look up the location of any HTTP request by IP address. For example, in a Rails controller or a Sinatra app:</p>
+
+<pre><code># returns Geocoder::Result object
+result = request.location
+</code></pre>
+
+<p>Note that this will usually return <code>nil</code> in your test and development environments because things like "localhost" and "0.0.0.0" are not an Internet IP addresses.</p>
+
+<p>See <em>Advanced Geocoding</em> below for more information about <code>Geocoder::Result</code> objects.</p>
+
+<h2>
+<a name="user-content-location-aware-database-queries" class="anchor" href="#location-aware-database-queries"><span class="octicon octicon-link"></span></a>Location-Aware Database Queries</h2>
+
+<p>To find objects by location, use the following scopes:</p>
+
+<pre><code>Venue.near('Omaha, NE, US', 20)    # venues within 20 miles of Omaha
+Venue.near([40.71, 100.23], 20)    # venues within 20 miles of a point
+Venue.near([40.71, 100.23], 20, :units =&gt; :km)
+                                   # venues within 20 kilometres of a point
+Venue.geocoded                     # venues with coordinates
+Venue.not_geocoded                 # venues without coordinates
+</code></pre>
+
+<p>With geocoded objects you can do things like this:</p>
+
+<pre><code>if obj.geocoded?
+  obj.nearbys(30)                      # other objects within 30 miles
+  obj.distance_from([40.714,-100.234]) # distance from arbitrary point to object
+  obj.bearing_to("Paris, France")      # direction from object to arbitrary point
+end
+</code></pre>
+
+<p>Some utility methods are also available:</p>
+
+<pre><code># look up coordinates of some location (like searching Google Maps)
+Geocoder.coordinates("25 Main St, Cooperstown, NY")
+ =&gt; [42.700149, -74.922767]
+
+# distance (in miles) between Eiffel Tower and Empire State Building
+Geocoder::Calculations.distance_between([47.858205,2.294359], [40.748433,-73.985655])
+ =&gt; 3619.77359999382
+
+# find the geographic center (aka center of gravity) of objects or points
+Geocoder::Calculations.geographic_center([city1, city2, [40.22,-73.99], city4])
+ =&gt; [35.14968, -90.048929]
+</code></pre>
+
+<p>Please see the code for more methods and detailed information about arguments (eg, working with kilometers).</p>
+
+<h2>
+<a name="user-content-distance-and-bearing" class="anchor" href="#distance-and-bearing"><span class="octicon octicon-link"></span></a>Distance and Bearing</h2>
+
+<p>When you run a location-aware query the returned objects have two attributes added to them (only w/ ActiveRecord):</p>
+
+<ul>
+<li>
+<code>obj.distance</code> - number of miles from the search point to this object</li>
+<li>
+<code>obj.bearing</code> - direction from the search point to this object</li>
+</ul><p>Results are automatically sorted by distance from the search point, closest to farthest. Bearing is given as a number of clockwise degrees from due north, for example:</p>
+
+<ul>
+<li>
+<code>0</code> - due north</li>
+<li>
+<code>180</code> - due south</li>
+<li>
+<code>90</code> - due east</li>
+<li>
+<code>270</code> - due west</li>
+<li>
+<code>230.1</code> - southwest</li>
+<li>
+<code>359.9</code> - almost due north</li>
+</ul><p>You can convert these numbers to compass point names by using the utility method provided:</p>
+
+<pre><code>Geocoder::Calculations.compass_point(355) # =&gt; "N"
+Geocoder::Calculations.compass_point(45)  # =&gt; "NE"
+Geocoder::Calculations.compass_point(208) # =&gt; "SW"
+</code></pre>
+
+<p><em>Note: when using SQLite <code>distance</code> and <code>bearing</code> values are provided for interface consistency only. They are not very accurate.</em></p>
+
+<p>To calculate accurate distance and bearing with SQLite or MongoDB:</p>
+
+<pre><code>obj.distance_to([43.9,-98.6])  # distance from obj to point
+obj.bearing_to([43.9,-98.6])   # bearing from obj to point
+obj.bearing_from(obj2)         # bearing from obj2 to obj
+</code></pre>
+
+<p>The <code>bearing_from/to</code> methods take a single argument which can be: a <code>[lat,lon]</code> array, a geocoded object, or a geocodable address (string). The <code>distance_from/to</code> methods also take a units argument (<code>:mi</code>, <code>:km</code>, or <code>:nm</code> for nautical miles).</p>
+
+<h2>
+<a name="user-content-model-configuration" class="anchor" href="#model-configuration"><span class="octicon octicon-link"></span></a>Model Configuration</h2>
+
+<p>You are not stuck with using the <code>latitude</code> and <code>longitude</code> database column names (with ActiveRecord) or the <code>coordinates</code> array (Mongo) for storing coordinates. For example:</p>
+
+<pre><code>geocoded_by :address, :latitude  =&gt; :lat, :longitude =&gt; :lon # ActiveRecord
+geocoded_by :address, :coordinates =&gt; :coords                # MongoDB
+</code></pre>
+
+<p>This means you can geocode multiple addresses as well:</p>
+
+<pre><code>geocoded_by :start_address, latitude: :start_latitude, longitude: :start_longitude
+geocoded_by :end_address, latitude: :end_latitude, longitude: :end_longitude
+</code></pre>
+
+<p>The <code>address</code> method can return any string you'd use to search Google Maps. For example, any of the following are acceptable:</p>
+
+<ul>
+<li>"714 Green St, Big Town, MO"</li>
+<li>"Eiffel Tower, Paris, FR"</li>
+<li>"Paris, TX, US"</li>
+</ul><p>If your model has <code>street</code>, <code>city</code>, <code>state</code>, and <code>country</code> attributes you might do something like this:</p>
+
+<pre><code>geocoded_by :address
+
+def address
+  [street, city, state, country].compact.join(', ')
+end
+</code></pre>
+
+<p>For reverse geocoding you can also specify an alternate name attribute where the address will be stored, for example:</p>
+
+<pre><code>reverse_geocoded_by :latitude, :longitude, :address =&gt; :location  # ActiveRecord
+reverse_geocoded_by :coordinates, :address =&gt; :loc                # MongoDB
+</code></pre>
+
+<p>You can also configure a specific lookup for your model which will override the globally-configured lookup, for example:</p>
+
+<pre><code>geocoded_by :address, :lookup =&gt; :yandex
+</code></pre>
+
+<p>You can also specify a proc if you want to choose a lookup based on a specific property of an object, for example you can use specialized lookups for different regions:</p>
+
+<pre><code>geocoded_by :address, :lookup =&gt; lambda{ |obj| obj.geocoder_lookup }
+
+def geocoder_lookup
+  if country_code == "RU"
+    :yandex
+  elsif country_code == "CN"
+    :baidu
+  else
+    :google
+  end
+end
+</code></pre>
+
+<h2>
+<a name="user-content-advanced-querying" class="anchor" href="#advanced-querying"><span class="octicon octicon-link"></span></a>Advanced Querying</h2>
+
+<p>When querying for objects (if you're using ActiveRecord) you can also look within a square rather than a radius (circle) by using the <code>within_bounding_box</code> scope:</p>
+
+<pre><code>distance = 20
+center_point = [40.71, 100.23]
+box = Geocoder::Calculations.bounding_box(center_point, distance)
+Venue.within_bounding_box(box)
+</code></pre>
+
+<p>This can also dramatically improve query performance, especially when used in conjunction with indexes on the latitude/longitude columns. Note, however, that returned results do not include <code>distance</code> and <code>bearing</code> attributes. Note that <code>#near</code> performs both bounding box and radius queries for speed.</p>
+
+<p>You can also specify a minimum radius (if you're using ActiveRecord and not Sqlite) to constrain the
+lower bound (ie. think of a donut, or ring) by using the <code>:min_radius</code> option:</p>
+
+<pre><code>box = Geocoder::Calculations.bounding_box(center_point, distance, :min_radius =&gt; 10.5)
+</code></pre>
+
+<h2>
+<a name="user-content-advanced-geocoding" class="anchor" href="#advanced-geocoding"><span class="octicon octicon-link"></span></a>Advanced Geocoding</h2>
+
+<p>So far we have looked at shortcuts for assigning geocoding results to object attributes. However, if you need to do something fancy you can skip the auto-assignment by providing a block (takes the object to be geocoded and an array of <code>Geocoder::Result</code> objects) in which you handle the parsed geocoding result any way you like, for example:</p>
+
+<pre><code>reverse_geocoded_by :latitude, :longitude do |obj,results|
+  if geo = results.first
+    obj.city    = geo.city
+    obj.zipcode = geo.postal_code
+    obj.country = geo.country_code
+  end
+end
+after_validation :reverse_geocode
+</code></pre>
+
+<p>Every <code>Geocoder::Result</code> object, <code>result</code>, provides the following data:</p>
+
+<ul>
+<li>
+<code>result.latitude</code> - float</li>
+<li>
+<code>result.longitude</code> - float</li>
+<li>
+<code>result.coordinates</code> - array of the above two</li>
+<li>
+<code>result.address</code> - string</li>
+<li>
+<code>result.city</code> - string</li>
+<li>
+<code>result.state</code> - string</li>
+<li>
+<code>result.state_code</code> - string</li>
+<li>
+<code>result.postal_code</code> - string</li>
+<li>
+<code>result.country</code> - string</li>
+<li>
+<code>result.country_code</code> - string</li>
+</ul><p>If you're familiar with the results returned by the geocoding service you're using you can access even more data, but you'll need to be familiar with the particular <code>Geocoder::Result</code> object you're using and the structure of your geocoding service's responses. (See below for links to geocoding service documentation.)</p>
+
+<h2>
+<a name="user-content-geocoding-service-lookup-configuration" class="anchor" href="#geocoding-service-lookup-configuration"><span class="octicon octicon-link"></span></a>Geocoding Service ("Lookup") Configuration</h2>
+
+<p>Geocoder supports a variety of street and IP address geocoding services. The default lookups are <code>:google</code> for street addresses and <code>:freegeoip</code> for IP addresses. Please see the listing and comparison below for details on specific geocoding services (not all settings are supported by all services). Some common configuration options are:</p>
+
+<pre><code># config/initializers/geocoder.rb
+Geocoder.configure(
+
+  # geocoding service (see below for supported options):
+  :lookup =&gt; :yandex,
+
+  # IP address geocoding service (see below for supported options):
+  :ip_lookup =&gt; :maxmind,
+
+  # to use an API key:
+  :api_key =&gt; "...",
+
+  # geocoding service request timeout, in seconds (default 3):
+  :timeout =&gt; 5,
+
+  # set default units to kilometers:
+  :units =&gt; :km,
+
+  # caching (see below for details):
+  :cache =&gt; Redis.new,
+  :cache_prefix =&gt; "..."
+
+)
+</code></pre>
+
+<p>Please see lib/geocoder/configuration.rb for a complete list of configuration options. Additionally, some lookups have their own configuration options, some of which are directly supported by Geocoder. For example, to specify a value for Google's <code>bounds</code> parameter:</p>
+
+<pre><code># with Google:
+Geocoder.search("Paris", :bounds =&gt; [[32.1,-95.9], [33.9,-94.3]])
+</code></pre>
+
+<p>Please see the <a href="https://github.com/alexreisner/geocoder/tree/master/lib/geocoder/lookups">source code for each lookup</a> to learn about directly supported parameters. Parameters which are not directly supported can be specified using the <code>:params</code> option, by which you can pass arbitrary parameters to any geocoding service. For example, to use Nominatim's <code>countrycodes</code> parameter:</p>
+
+<pre><code># with Nominatim:
+Geocoder.search("Paris", :params =&gt; {:countrycodes =&gt; "gb,de,fr,es,us"})
+</code></pre>
+
+<p>You can also configure multiple geocoding services at once, like this:</p>
+
+<pre><code>Geocoder.configure(
+
+  :timeout =&gt; 2,
+  :cache =&gt; Redis.new,
+
+  :yandex =&gt; {
+    :api_key =&gt; "...",
+    :timeout =&gt; 5
+  },
+
+  :baidu =&gt; {
+    :api_key =&gt; "..."
+  },
+
+  :maxmind =&gt; {
+    :api_key =&gt; "...",
+    :service =&gt; :omni
+  }
+
+)
+</code></pre>
+
+<p>The above combines global and service-specific options and could be useful if you specify different geocoding services for different models or under different conditions. Lookup-specific settings override global settings so, for example, in the above the timeout for all lookups would be 2 seconds, except for Yandex which would be 5.</p>
+
+<h3>
+<a name="user-content-street-address-services" class="anchor" href="#street-address-services"><span class="octicon octicon-link"></span></a>Street Address Services</h3>
+
+<p>The following is a comparison of the supported geocoding APIs. The "Limitations" listed for each are a very brief and incomplete summary of some special limitations beyond basic data source attribution. Please read the official Terms of Service for a service before using it.</p>
+
+<h4>
+<a name="user-content-google-google-google_premier" class="anchor" href="#google-google-google_premier"><span class="octicon octicon-link"></span></a>Google (<code>:google</code>, <code>:google_premier</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required for Premier (do NOT use a key for the free version)</li>
+<li>
+<strong>Key signup</strong>: <a href="https://developers.google.com/maps/documentation/business/">https://developers.google.com/maps/documentation/business/</a>
+</li>
+<li>
+<strong>Quota</strong>: 2,500 requests/day, 100,000 with Google Maps API Premier</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: yes</li>
+<li>
+<strong>Languages</strong>: ar, eu, bg, bn, ca, cs, da, de, el, en, en-AU, en-GB, es, eu, fa, fi, fil, fr, gl, gu, hi, hr, hu, id, it, iw, ja, kn, ko, lt, lv, ml, mr, nl, no, pl, pt, pt-BR, pt-PT, ro, ru, sk, sl, sr, sv, tl, ta, te, th, tr, uk, vi, zh-CN, zh-TW (see <a href="http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&amp;gid=1">http://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&amp;gid=1</a>)</li>
+<li>
+<strong>Extra options</strong>: <code>:bounds</code> - pass SW and NE coordinates as an array of two arrays to bias results towards a viewport</li>
+<li>
+<strong>Documentation</strong>: <a href="http://code.google.com/apis/maps/documentation/geocoding/#JSON">http://code.google.com/apis/maps/documentation/geocoding/#JSON</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://code.google.com/apis/maps/terms.html#section_10_12">http://code.google.com/apis/maps/terms.html#section_10_12</a>
+</li>
+<li>
+<strong>Limitations</strong>: "You must not use or display the Content without a corresponding Google map, unless you are explicitly permitted to do so in the Maps APIs Documentation, or through written permission from Google." "You must not pre-fetch, cache, or store any Content, except that you may store: (i) limited amounts of Content for the purpose of improving the performance of your Maps API Implementation..."</li>
+<li>
+<strong>Notes</strong>: To use Google Premier set <code>Geocoder.configure(:lookup =&gt; :google_premier, :api_key =&gt; [key, client, channel])</code>.</li>
+</ul><h4>
+<a name="user-content-yahoo-boss-yahoo" class="anchor" href="#yahoo-boss-yahoo"><span class="octicon octicon-link"></span></a>Yahoo BOSS (<code>:yahoo</code>)</h4>
+
+<p>Yahoo BOSS is <strong>not a free service</strong>. As of November 17, 2012 Yahoo no longer offers a free geocoding API.</p>
+
+<ul>
+<li>
+<strong>API key</strong>: requires OAuth consumer key and secret (set <code>Geocoder.configure(:api_key =&gt; [key, secret])</code>)</li>
+<li>
+<strong>Key signup</strong>: <a href="http://developer.yahoo.com/boss/geo/">http://developer.yahoo.com/boss/geo/</a>
+</li>
+<li>
+<strong>Quota</strong>: unlimited, but subject to usage fees</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: en, fr, de, it, es, pt, nl, zh, ja, ko</li>
+<li>
+<strong>Documentation</strong>: <a href="http://developer.yahoo.com/boss/geo/docs/index.html">http://developer.yahoo.com/boss/geo/docs/index.html</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://info.yahoo.com/legal/us/yahoo/boss/tou/?pir=ucJPcJ1ibUn.h.d.lVmlcbcEkoHjwJ_PvxG9SLK9VIbIQAw1XFrnDqY-">http://info.yahoo.com/legal/us/yahoo/boss/tou/?pir=ucJPcJ1ibUn.h.d.lVmlcbcEkoHjwJ_PvxG9SLK9VIbIQAw1XFrnDqY-</a>
+</li>
+<li>
+<strong>Limitations</strong>: No mass downloads, no commercial map production based on the data, no storage of data except for caching.</li>
+</ul><h4>
+<a name="user-content-bing-bing" class="anchor" href="#bing-bing"><span class="octicon octicon-link"></span></a>Bing (<code>:bing</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Key signup</strong>: <a href="http://www.bingmapsportal.com">http://www.bingmapsportal.com</a>
+</li>
+<li>
+<strong>Quota</strong>: 50,000 requests/24 hrs</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: ?</li>
+<li>
+<strong>Documentation</strong>: <a href="http://msdn.microsoft.com/en-us/library/ff701715.aspx">http://msdn.microsoft.com/en-us/library/ff701715.aspx</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://www.microsoft.com/maps/product/terms.html">http://www.microsoft.com/maps/product/terms.html</a>
+</li>
+<li>
+<strong>Limitations</strong>: No country codes or state names. Must be used on "public-facing, non-password protected web sites," "in conjunction with Bing Maps or an application that integrates Bing Maps."</li>
+</ul><h4>
+<a name="user-content-nominatim-nominatim" class="anchor" href="#nominatim-nominatim"><span class="octicon octicon-link"></span></a>Nominatim (<code>:nominatim</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: none</li>
+<li>
+<strong>Quota</strong>: 1 request/second</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: ?</li>
+<li>
+<strong>Documentation</strong>: <a href="http://wiki.openstreetmap.org/wiki/Nominatim">http://wiki.openstreetmap.org/wiki/Nominatim</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy</a>
+</li>
+<li>
+<strong>Limitations</strong>: Please limit request rate to 1 per second and include your contact information in User-Agent headers (eg: <code>Geocoder.configure(:http_headers =&gt; { "User-Agent" =&gt; "your contact info" })</code>). Data licensed under CC-BY-SA (you must provide attribution).</li>
+</ul><h4>
+<a name="user-content-yandex-yandex" class="anchor" href="#yandex-yandex"><span class="octicon octicon-link"></span></a>Yandex (<code>:yandex</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: none</li>
+<li>
+<strong>Quota</strong>: 25000 requests / day</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: Russian, Belarusian, Ukrainian, English, Turkish (only for maps of Turkey)</li>
+<li>
+<strong>Documentation</strong>: <a href="http://api.yandex.com.tr/maps/doc/intro/concepts/intro.xml">http://api.yandex.com.tr/maps/doc/intro/concepts/intro.xml</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://api.yandex.com.tr/maps/doc/intro/concepts/intro.xml#rules">http://api.yandex.com.tr/maps/doc/intro/concepts/intro.xml#rules</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+</ul><h4>
+<a name="user-content-geocoderca-geocoder_ca" class="anchor" href="#geocoderca-geocoder_ca"><span class="octicon octicon-link"></span></a>Geocoder.ca (<code>:geocoder_ca</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: none</li>
+<li>
+<strong>Quota</strong>: ?</li>
+<li>
+<strong>Region</strong>: US and Canada</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: ?</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://geocoder.ca/?terms=1">http://geocoder.ca/?terms=1</a>
+</li>
+<li>
+<strong>Limitations</strong>: "Under no circumstances can our data be re-distributed or re-sold by anyone to other parties without our written permission."</li>
+</ul><h4>
+<a name="user-content-geocoderus-geocoder_us" class="anchor" href="#geocoderus-geocoder_us"><span class="octicon octicon-link"></span></a>Geocoder.us (<code>:geocoder_us</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: HTTP Basic Auth</li>
+<li>
+<strong>Sign up</strong>: <a href="http://geocoder.us/user/signup">http://geocoder.us/user/signup</a>
+</li>
+<li>
+<strong>Quota</strong>: You can purchase 20,000 credits at a time for $50</li>
+<li>
+<strong>Region</strong>: US</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: <a href="http://geocoder.us/help/">http://geocoder.us/help/</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://geocoder.us/terms.shtml">http://geocoder.us/terms.shtml</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+</ul><h4>
+<a name="user-content-mapquest-mapquest" class="anchor" href="#mapquest-mapquest"><span class="octicon octicon-link"></span></a>Mapquest (<code>:mapquest</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Key signup</strong>: <a href="http://developer.mapquest.com/web/products/open">http://developer.mapquest.com/web/products/open</a>
+</li>
+<li>
+<strong>Quota</strong>: ?</li>
+<li>
+<strong>HTTP Headers</strong>: in order to use the licensed API you can configure the http_headers to include a referer as so:
+<code>Geocoder.configure(:http_headers =&gt; { "Referer" =&gt; "http://foo.com" })</code>
+You can also allow a blank referer from the API management console via mapquest but it is potentially a security risk that someone else could use your API key from another domain.</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: <a href="http://www.mapquestapi.com/geocoding/">http://www.mapquestapi.com/geocoding/</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://info.mapquest.com/terms-of-use/">http://info.mapquest.com/terms-of-use/</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+<li>
+<strong>Notes</strong>: You can specify the licensed API by setting: <code>Geocoder.configure(:mapquest =&gt; {:licensed =&gt; true})</code> (defaults to free "open" version)</li>
+</ul><h4>
+<a name="user-content-ovinokia-ovi" class="anchor" href="#ovinokia-ovi"><span class="octicon octicon-link"></span></a>Ovi/Nokia (<code>:ovi</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: not required, but performance restricted without it</li>
+<li>
+<strong>Quota</strong>: ?</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: <a href="http://api.maps.ovi.com/devguide/overview.html">http://api.maps.ovi.com/devguide/overview.html</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://www.developer.nokia.com/Develop/Maps/TC.html">http://www.developer.nokia.com/Develop/Maps/TC.html</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+</ul><h4>
+<a name="user-content-herenokia-here" class="anchor" href="#herenokia-here"><span class="octicon octicon-link"></span></a>Here/Nokia (<code>:here</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Quota</strong>: Depending on the API key</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: yes</li>
+<li>
+<strong>Languages</strong>: The preferred language of address elements in the result. Language code must be provided according to RFC 4647 standard.</li>
+<li>
+<strong>Documentation</strong>: <a href="http://developer.here.com/rest-apis/documentation/geocoder">http://developer.here.com/rest-apis/documentation/geocoder</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://developer.here.com/faqs#l&amp;t">http://developer.here.com/faqs#l&amp;t</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+</ul><h4>
+<a name="user-content-esri-esri" class="anchor" href="#esri-esri"><span class="octicon octicon-link"></span></a>ESRI (<code>:esri</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: none</li>
+<li>
+<strong>Quota</strong>: Required for some scenarios (see Terms of Service)</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: yes</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: <a href="http://resources.arcgis.com/en/help/arcgis-online-geocoding-rest-api/">http://resources.arcgis.com/en/help/arcgis-online-geocoding-rest-api/</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://www.esri.com/legal/software-license">http://www.esri.com/legal/software-license</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+<li>
+<strong>Notes</strong>: You can specify which projection you want to use by setting, for example: <code>Geocoder.configure(:esri =&gt; {:outSR =&gt; 102100})</code>.</li>
+</ul><h4>
+<a name="user-content-data-science-toolkit-dstk" class="anchor" href="#data-science-toolkit-dstk"><span class="octicon octicon-link"></span></a>Data Science Toolkit (<code>:dstk</code>)</h4>
+
+<p>Data Science Toolkit provides an API whose reponse format is like Google's but which can be set up as a privately hosted service.</p>
+
+<ul>
+<li>
+<strong>API key</strong>: none</li>
+<li>
+<strong>Quota</strong>: None quota if you are self-hosting the service.</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: ?</li>
+<li>
+<strong>Languages</strong>: en</li>
+<li>
+<strong>Documentation</strong>: <a href="http://www.datasciencetoolkit.org/developerdocs">http://www.datasciencetoolkit.org/developerdocs</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://www.datasciencetoolkit.org/developerdocs#googlestylegeocoder">http://www.datasciencetoolkit.org/developerdocs#googlestylegeocoder</a>
+</li>
+<li>
+<strong>Limitations</strong>: No reverse geocoding.</li>
+<li>
+<strong>Notes</strong>: If you are hosting your own DSTK server you will need to configure the host name, eg: <code>Geocoder.configure(:lookup =&gt; :dstk, :host =&gt; "localhost:4567")</code>.</li>
+</ul><h4>
+<a name="user-content-baidu-baidu" class="anchor" href="#baidu-baidu"><span class="octicon octicon-link"></span></a>Baidu (<code>:baidu</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Quota</strong>: No quota limits for geocoding</li>
+<li>
+<strong>Region</strong>: China</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: Chinese (Simplified)</li>
+<li>
+<strong>Documentation</strong>: <a href="http://developer.baidu.com/map/webservice-geocoding.htm">http://developer.baidu.com/map/webservice-geocoding.htm</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://developer.baidu.com/map/law.htm">http://developer.baidu.com/map/law.htm</a>
+</li>
+<li>
+<strong>Limitations</strong>: Only good for non-commercial use. For commercial usage please check <a href="http://developer.baidu.com/map/question.htm#qa0013">http://developer.baidu.com/map/question.htm#qa0013</a>
+</li>
+<li>
+<strong>Notes</strong>: To use Baidu set <code>Geocoder.configure(:lookup =&gt; :baidu, :api_key =&gt; "your_api_key")</code>.</li>
+</ul><h4>
+<a name="user-content-cloudmade-cloudmade" class="anchor" href="#cloudmade-cloudmade"><span class="octicon octicon-link"></span></a>CloudMade (<code>:cloudmade</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Quota</strong>: 100,000 free requests, then purchase 100,000 more for $15</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: yes ($5 per 100,000 requests)</li>
+<li>
+<strong>Languages</strong>: en</li>
+<li>
+<strong>Documentation</strong>: <a href="http://cloudmade.com/documentation/geocoding">http://cloudmade.com/documentation/geocoding</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://cloudmade.com/api-terms-of-service">http://cloudmade.com/api-terms-of-service</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+</ul><h4>
+<a name="user-content-geocodio-geocodio" class="anchor" href="#geocodio-geocodio"><span class="octicon octicon-link"></span></a>Geocodio (<code>:geocodio</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Quota</strong>: 2,500 free requests/day then purchase $.001 for each</li>
+<li>
+<strong>Region</strong>: US</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: en</li>
+<li>
+<strong>Documentation</strong>: <a href="http://geocod.io/docs">http://geocod.io/docs</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://geocod.io/terms-of-use">http://geocod.io/terms-of-use</a>
+</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+</ul><h4>
+<a name="user-content-smartystreets-smarty_streets" class="anchor" href="#smartystreets-smarty_streets"><span class="octicon octicon-link"></span></a>SmartyStreets (<code>:smarty_streets</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Quota</strong>: 10,000 free, 250/month then purchase at sliding scale. Unlimited free for nonprofits &amp; startups</li>
+<li>
+<strong>Region</strong>: US</li>
+<li>
+<strong>SSL support</strong>: yes</li>
+<li>
+<strong>Languages</strong>: en</li>
+<li>
+<strong>Documentation</strong>: <a href="http://smartystreets.com/kb/liveaddress-api/rest-endpoint">http://smartystreets.com/kb/liveaddress-api/rest-endpoint</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://smartystreets.com/legal/terms-of-service">http://smartystreets.com/legal/terms-of-service</a>
+</li>
+<li>
+<strong>Limitations</strong>: No reverse geocoding.</li>
+</ul><h3>
+<a name="user-content-ip-address-services" class="anchor" href="#ip-address-services"><span class="octicon octicon-link"></span></a>IP Address Services</h3>
+
+<h4>
+<a name="user-content-freegeoip-freegeoip" class="anchor" href="#freegeoip-freegeoip"><span class="octicon octicon-link"></span></a>FreeGeoIP (<code>:freegeoip</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: none</li>
+<li>
+<strong>Quota</strong>: 10000 requests per hour. After reaching the hourly quota, all of your requests will result in HTTP 403 (Forbidden) until it clears up on the next roll over.</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: <a href="http://github.com/fiorix/freegeoip/blob/master/README.md">http://github.com/fiorix/freegeoip/blob/master/README.md</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: ?</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+</ul><h4>
+<a name="user-content-maxmind-web-services-maxmind" class="anchor" href="#maxmind-web-services-maxmind"><span class="octicon octicon-link"></span></a>MaxMind Web Services (<code>:maxmind</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Quota</strong>: Request Packs can be purchased</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: yes</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: <a href="http://www.maxmind.com/app/web_services">http://www.maxmind.com/app/web_services</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: ?</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+<li>
+<strong>Notes</strong>: You must specify which MaxMind service you are using in your configuration. For example: <code>Geocoder.configure(:maxmind =&gt; {:service =&gt; :omni})</code>.</li>
+</ul><h4>
+<a name="user-content-maxmind-local-maxmind_local---experimental" class="anchor" href="#maxmind-local-maxmind_local---experimental"><span class="octicon octicon-link"></span></a>MaxMind Local (<code>:maxmind_local</code>) - EXPERIMENTAL</h4>
+
+<p>This lookup provides methods for geocoding IP addresses without making a call to a remote API (improves speed and availability). It works, but support is new and should not be considered production-ready. Please <a href="https://github.com/alexreisner/geocoder/issues">report any bugs</a> you encounter.</p>
+
+<ul>
+<li>
+<strong>API key</strong>: none (requires the GeoLite City database which can be downloaded from <a href="http://dev.maxmind.com/geoip/legacy/geolite/">MaxMind</a>)</li>
+<li>
+<strong>Quota</strong>: none</li>
+<li>
+<strong>Region</strong>: world</li>
+<li>
+<strong>SSL support</strong>: N/A</li>
+<li>
+<strong>Languages</strong>: English</li>
+<li>
+<strong>Documentation</strong>: <a href="http://www.maxmind.com/en/city">http://www.maxmind.com/en/city</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: ?</li>
+<li>
+<strong>Limitations</strong>: ?</li>
+<li>
+<strong>Notes</strong>: There are two supported formats for MaxMind local data: binary file, and CSV file imported into an SQL database. <strong>You must download a database from MaxMind and set either the <code>:file</code> or <code>:package</code> configuration option for local lookups to work.</strong>
+</li>
+</ul><p><strong>To use a binary file</strong> you must add the <em>geoip</em> (or <em>jgeoip</em> for JRuby) gem to your Gemfile or have it installed in your system, and specify the path of the MaxMind database in your configuration. For example:</p>
+
+<pre><code>Geocoder.configure(ip_lookup: :maxmind_local, maxmind_local: {file: File.join('folder', 'GeoLiteCity.dat')})
+</code></pre>
+
+<p><strong>To use a CSV file</strong> you must import it into an SQL database. The GeoLite <em>City</em> and <em>Country</em> packages are supported. Configure like so:</p>
+
+<pre><code>Geocoder.configure(ip_lookup: :maxmind_local, maxmind_local: {package: :city})
+</code></pre>
+
+<p>You can generate ActiveRecord migrations and download and import data via provided rake tasks:</p>
+
+<pre><code>rails generate geocoder:maxmind:geolite_city
+
+rake geocoder:maxmind:geolite_city:download
+rake geocoder:maxmind:geolite_city:extract
+rake geocoder:maxmind:geolite_city:insert
+rake geocoder:maxmind:geolite_city:load # runs the above three in sequence
+</code></pre>
+
+<p>You can replace <code>city</code> with <code>country</code> in any of the above tasks, generators, and configurations.</p>
+
+<h4>
+<a name="user-content-baidu-ip-baidu_ip" class="anchor" href="#baidu-ip-baidu_ip"><span class="octicon octicon-link"></span></a>Baidu IP (<code>:baidu_ip</code>)</h4>
+
+<ul>
+<li>
+<strong>API key</strong>: required</li>
+<li>
+<strong>Quota</strong>: No quota limits for geocoding</li>
+<li>
+<strong>Region</strong>: China</li>
+<li>
+<strong>SSL support</strong>: no</li>
+<li>
+<strong>Languages</strong>: Chinese (Simplified)</li>
+<li>
+<strong>Documentation</strong>: <a href="http://developer.baidu.com/map/webservice-geocoding.htm">http://developer.baidu.com/map/webservice-geocoding.htm</a>
+</li>
+<li>
+<strong>Terms of Service</strong>: <a href="http://developer.baidu.com/map/law.htm">http://developer.baidu.com/map/law.htm</a>
+</li>
+<li>
+<strong>Limitations</strong>: Only good for non-commercial use. For commercial usage please check <a href="http://developer.baidu.com/map/question.htm#qa0013">http://developer.baidu.com/map/question.htm#qa0013</a>
+</li>
+<li>
+<strong>Notes</strong>: To use Baidu set <code>Geocoder.configure(:lookup =&gt; :baidu_ip, :api_key =&gt; "your_api_key")</code>.</li>
+</ul><h2>
+<a name="user-content-caching" class="anchor" href="#caching"><span class="octicon octicon-link"></span></a>Caching</h2>
+
+<p>It's a good idea, when relying on any external service, to cache retrieved data. When implemented correctly it improves your app's response time and stability. It's easy to cache geocoding results with Geocoder, just configure a cache store:</p>
+
+<pre><code>Geocoder.configure(:cache =&gt; Redis.new)
+</code></pre>
+
+<p>This example uses Redis, but the cache store can be any object that supports these methods:</p>
+
+<ul>
+<li>
+<code>store#[](key)</code> or <code>#get</code> or <code>#read</code> - retrieves a value</li>
+<li>
+<code>store#[]=(key, value)</code> or <code>#set</code> or <code>#write</code> - stores a value</li>
+<li>
+<code>store#del(url)</code> - deletes a value</li>
+</ul><p>Even a plain Ruby hash will work, though it's not a great choice (cleared out when app is restarted, not shared between app instances, etc).</p>
+
+<p>You can also set a custom prefix to be used for cache keys:</p>
+
+<pre><code>Geocoder.configure(:cache_prefix =&gt; "...")
+</code></pre>
+
+<p>By default the prefix is <code>geocoder:</code></p>
+
+<p>If you need to expire cached content:</p>
+
+<pre><code>Geocoder.cache.expire("http://...") # expire cached result for a URL
+Geocoder.cache.expire(:all)         # expire all cached results
+</code></pre>
+
+<p>Do <em>not</em> include the prefix when passing a URL to be expired. Expiring <code>:all</code> will only expire keys with the configured prefix (won't kill every entry in your key/value store).</p>
+
+<p>For an example of a cache store with URL expiry please see examples/autoexpire_cache.rb</p>
+
+<p><em>Before you implement caching in your app please be sure that doing so does not violate the Terms of Service for your geocoding service.</em></p>
+
+<h2>
+<a name="user-content-forward-and-reverse-geocoding-in-the-same-model" class="anchor" href="#forward-and-reverse-geocoding-in-the-same-model"><span class="octicon octicon-link"></span></a>Forward and Reverse Geocoding in the Same Model</h2>
+
+<p>If you apply both forward and reverse geocoding functionality to the same model (say users can supply an address or coordinates and you want to fill in whatever's missing), you will provide two address methods:</p>
+
+<ul>
+<li>one for storing the fetched address (reverse geocoding)</li>
+<li>one for providing an address to use when fetching coordinates (forward geocoding)</li>
+</ul><p>For example:</p>
+
+<pre><code>class Venue
+
+  # build an address from street, city, and state attributes
+  geocoded_by :address_from_components
+
+  # store the fetched address in the full_address attribute
+  reverse_geocoded_by :latitude, :longitude, :address =&gt; :full_address
+end
+</code></pre>
+
+<p>However, there can be only one set of latitude/longitude attributes, and whichever you specify last will be used. For example:</p>
+
+<pre><code>class Venue
+
+  geocoded_by :address,
+    :latitude  =&gt; :fetched_latitude,  # this will be overridden by the below
+    :longitude =&gt; :fetched_longitude  # same here
+
+  reverse_geocoded_by :latitude, :longitude
+end
+</code></pre>
+
+<p>The reason for this is that we don't want ambiguity when doing distance calculations. We need a single, authoritative source for coordinates!</p>
+
+<p>Once both forward and reverse geocoding has been applied, it is possible to call them sequentially.</p>
+
+<p>For example:</p>
+
+<pre><code>class Venue
+
+  after_validation :geocode, :reverse_geocode
+
+end
+</code></pre>
+
+<p>For certain geolocation services such as Google geolocation API this may cause issues during subsequent updates to database records if the longtitude and latitude coordinates cannot be associated known location address (on a large body of water for example). On subsequent callbacks the following call:</p>
+
+<pre><code> after_validation :geocode
+</code></pre>
+
+<p>will alter the longtitude and latitude attributes based on the location field, which would be the closest known location to the original coordinates. In this case it is better to add conditions to each call, as not to override coordinates that do not have known location addresses associated with them.</p>
+
+<p>For example:</p>
+
+<pre><code>class Venue
+
+  after_validation :reverse_geocode, :if =&gt; :has_coordinates
+  after_validation :geocode, :if =&gt; :has_location, :unless =&gt; :has_coordinates
+
+end
+</code></pre>
+
+<h2>
+<a name="user-content-use-outside-of-rails" class="anchor" href="#use-outside-of-rails"><span class="octicon octicon-link"></span></a>Use Outside of Rails</h2>
+
+<p>You can use Geocoder outside of Rails by calling the <code>Geocoder.search</code> method:</p>
+
+<pre><code>results = Geocoder.search("McCarren Park, Brooklyn, NY")
+</code></pre>
+
+<p>This returns an array of <code>Geocoder::Result</code> objects with all data provided by the geocoding service.</p>
+
+<h2>
+<a name="user-content-testing-apps-that-use-geocoder" class="anchor" href="#testing-apps-that-use-geocoder"><span class="octicon octicon-link"></span></a>Testing Apps that Use Geocoder</h2>
+
+<p>When writing tests for an app that uses Geocoder it may be useful to avoid network calls and have Geocoder return consistent, configurable results. To do this, configure and use the <code>:test</code> lookup. For example:</p>
+
+<pre><code>Geocoder.configure(:lookup =&gt; :test)
+
+Geocoder::Lookup::Test.add_stub(
+  "New York, NY", [
+    {
+      'latitude'     =&gt; 40.7143528,
+      'longitude'    =&gt; -74.0059731,
+      'address'      =&gt; 'New York, NY, USA',
+      'state'        =&gt; 'New York',
+      'state_code'   =&gt; 'NY',
+      'country'      =&gt; 'United States',
+      'country_code' =&gt; 'US'
+    }
+  ]
+)
+</code></pre>
+
+<p>Now, any time Geocoder looks up "New York, NY" its results array will contain one result with the above attributes. You can also set a default stub:</p>
+
+<pre><code>Geocoder.configure(:lookup =&gt; :test)
+
+Geocoder::Lookup::Test.set_default_stub(
+  [
+    {
+      'latitude'     =&gt; 40.7143528,
+      'longitude'    =&gt; -74.0059731,
+      'address'      =&gt; 'New York, NY, USA',
+      'state'        =&gt; 'New York',
+      'state_code'   =&gt; 'NY',
+      'country'      =&gt; 'United States',
+      'country_code' =&gt; 'US'
+    }
+  ]
+)
+</code></pre>
+
+<p>Any query that hasn't been explicitly stubbed will return that result.</p>
+
+<h2>
+<a name="user-content-command-line-interface" class="anchor" href="#command-line-interface"><span class="octicon octicon-link"></span></a>Command Line Interface</h2>
+
+<p>When you install the Geocoder gem it adds a <code>geocode</code> command to your shell. You can search for a street address, IP address, postal code, coordinates, etc just like you can with the Geocoder.search method for example:</p>
+
+<pre><code>$ geocode 29.951,-90.081
+Latitude:         29.952211
+Longitude:        -90.080563
+Full address:     1500 Sugar Bowl Dr, New Orleans, LA 70112, USA
+City:             New Orleans
+State/province:   Louisiana
+Postal code:      70112
+Country:          United States
+Google map:       http://maps.google.com/maps?q=29.952211,-90.080563
+</code></pre>
+
+<p>There are also a number of options for setting the geocoding API, key, and language, viewing the raw JSON reponse, and more. Please run <code>geocode -h</code> for details.</p>
+
+<h2>
+<a name="user-content-numeric-data-types-and-precision" class="anchor" href="#numeric-data-types-and-precision"><span class="octicon octicon-link"></span></a>Numeric Data Types and Precision</h2>
+
+<p>Geocoder works with any numeric data type (e.g. float, double, decimal) on which trig (and other mathematical) functions can be performed.</p>
+
+<p>A summary of the relationship between geographic precision and the number of decimal places in latitude and longitude degree values is available on <a href="http://en.wikipedia.org/wiki/Decimal_degrees#Accuracy">Wikipedia</a>. As an example: at the equator, latitude/longitude values with 4 decimal places give about 11 metres precision, whereas 5 decimal places gives roughly 1 metre precision.</p>
+
+<h2>
+<a name="user-content-notes-on-mongodb" class="anchor" href="#notes-on-mongodb"><span class="octicon octicon-link"></span></a>Notes on MongoDB</h2>
+
+<h3>
+<a name="user-content-the-near-method" class="anchor" href="#the-near-method"><span class="octicon octicon-link"></span></a>The Near Method</h3>
+
+<p>Mongo document classes (Mongoid and MongoMapper) have a built-in <code>near</code> scope, but since it only works two-dimensions Geocoder overrides it with its own spherical <code>near</code> method in geocoded classes.</p>
+
+<h3>
+<a name="user-content-latitudelongitude-order" class="anchor" href="#latitudelongitude-order"><span class="octicon octicon-link"></span></a>Latitude/Longitude Order</h3>
+
+<p>Coordinates are generally printed and spoken as latitude, then longitude ([lat,lon]). Geocoder respects this convention and always expects method arguments to be given in [lat,lon] order. However, MongoDB requires that coordinates be stored in [lon,lat] order as per the GeoJSON spec (<a href="http://geojson.org/geojson-spec.html#positions">http://geojson.org/geojson-spec.html#positions</a>), so internally they are stored "backwards." However, this does not affect order of arguments to methods when using Mongoid or MongoMapper.</p>
+
+<p>To access an object's coordinates in the conventional order, use the <code>to_coordinates</code> instance method provided by Geocoder. For example:</p>
+
+<pre><code>obj.to_coordinates  # =&gt; [37.7941013, -122.3951096] # [lat, lon]
+</code></pre>
+
+<p>Calling <code>obj.coordinates</code> directly returns the internal representation of the coordinates which, in the case of MongoDB, is probably the reverse of what you want:</p>
+
+<pre><code>obj.coordinates     # =&gt; [-122.3951096, 37.7941013] # [lon, lat]
+</code></pre>
+
+<p>For consistency with the rest of Geocoder, always use the <code>to_coordinates</code> method instead.</p>
+
+<h2>
+<a name="user-content-notes-on-non-rails-frameworks" class="anchor" href="#notes-on-non-rails-frameworks"><span class="octicon octicon-link"></span></a>Notes on Non-Rails Frameworks</h2>
+
+<p>If you are using Geocoder with ActiveRecord and a framework other than Rails (like Sinatra or Padrino) you will need to add this in your model before calling Geocoder methods:</p>
+
+<pre><code>extend Geocoder::Model::ActiveRecord
+</code></pre>
+
+<h2>
+<a name="user-content-optimisation-of-distance-queries" class="anchor" href="#optimisation-of-distance-queries"><span class="octicon octicon-link"></span></a>Optimisation of Distance Queries</h2>
+
+<p>In MySQL and Postgres the finding of objects near a given point is speeded up by using a bounding box to limit the number of points over which a full distance calculation needs to be done.</p>
+
+<p>To take advantage of this optimisation you need to add a composite index on latitude and longitude. In your Rails migration:</p>
+
+<pre><code>add_index :table, [:latitude, :longitude]
+</code></pre>
+
+<h2>
+<a name="user-content-distance-queries-in-sqlite" class="anchor" href="#distance-queries-in-sqlite"><span class="octicon octicon-link"></span></a>Distance Queries in SQLite</h2>
+
+<p>SQLite's lack of trigonometric functions requires an alternate implementation of the <code>near</code> scope. When using SQLite, Geocoder will automatically use a less accurate algorithm for finding objects near a given point. Results of this algorithm should not be trusted too much as it will return objects that are outside the given radius, along with inaccurate distance and bearing calculations.</p>
+
+<h3>
+<a name="user-content-discussion" class="anchor" href="#discussion"><span class="octicon octicon-link"></span></a>Discussion</h3>
+
+<p>There are few options for finding objects near a given point in SQLite without installing extensions:</p>
+
+<ol>
+<li><p>Use a square instead of a circle for finding nearby points. For example, if you want to find points near 40.71, 100.23, search for objects with latitude between 39.71 and 41.71 and longitude between 99.23 and 101.23. One degree of latitude or longitude is at most 69 miles so divide your radius (in miles) by 69.0 to get the amount to add and subtract from your center coordinates to get the upper and lower bounds. The results will not be very accurate (you'll get points outside the desired radius), but you will get all the points within the required radius.</p></li>
+<li><p>Load all objects into memory and compute distances between them using the <code>Geocoder::Calculations.distance_between</code> method. This will produce accurate results but will be very slow (and use a lot of memory) if you have a lot of objects in your database.</p></li>
+<li><p>If you have a large number of objects (so you can't use approach #2) and you need accurate results (better than approach #1 will give), you can use a combination of the two. Get all the objects within a square around your center point, and then eliminate the ones that are too far away using <code>Geocoder::Calculations.distance_between</code>.</p></li>
+</ol><p>Because Geocoder needs to provide this functionality as a scope, we must go with option #1, but feel free to implement #2 or #3 if you need more accuracy.</p>
+
+<h2>
+<a name="user-content-tests" class="anchor" href="#tests"><span class="octicon octicon-link"></span></a>Tests</h2>
+
+<p>Geocoder comes with a test suite (just run <code>rake test</code>) that mocks ActiveRecord and is focused on testing the aspects of Geocoder that do not involve executing database queries. Geocoder uses many database engine-specific queries which must be tested against all supported databases (SQLite, MySQL, etc). Ideally this involves creating a full, working Rails application, and that seems beyond the scope of the included test suite. As such, I have created a separate repository which includes a full-blown Rails application and some utilities for easily running tests against multiple environments:</p>
+
+<p><a href="http://github.com/alexreisner/geocoder_test">http://github.com/alexreisner/geocoder_test</a></p>
+
+<h2>
+<a name="user-content-error-handling" class="anchor" href="#error-handling"><span class="octicon octicon-link"></span></a>Error Handling</h2>
+
+<p>By default Geocoder will rescue any exceptions raised by calls to a geocoding service and return an empty array (using warn() to inform you of the error). You can override this on a per-exception basis, and also have Geocoder raise its own exceptions for certain events (eg: API quota exceeded) by using the <code>:always_raise</code> option:</p>
+
+<pre><code>Geocoder.configure(:always_raise =&gt; [SocketError, TimeoutError])
+</code></pre>
+
+<p>You can also do this to raise all exceptions:</p>
+
+<pre><code>Geocoder.configure(:always_raise =&gt; :all)
+</code></pre>
+
+<p>The raise-able exceptions are:</p>
+
+<pre><code>SocketError
+TimeoutError
+Geocoder::OverQueryLimitError
+Geocoder::RequestDenied
+Geocoder::InvalidRequest
+Geocoder::InvalidApiKey
+</code></pre>
+
+<p>Note that not all lookups support all exceptions.</p>
+
+<h2>
+<a name="user-content-troubleshooting" class="anchor" href="#troubleshooting"><span class="octicon octicon-link"></span></a>Troubleshooting</h2>
+
+<h3>
+<a name="user-content-mongoid-1" class="anchor" href="#mongoid-1"><span class="octicon octicon-link"></span></a>Mongoid</h3>
+
+<p>If you get one of these errors:</p>
+
+<pre><code>uninitialized constant Geocoder::Model::Mongoid
+uninitialized constant Geocoder::Model::Mongoid::Mongo
+</code></pre>
+
+<p>you should check your Gemfile to make sure the Mongoid gem is listed <em>before</em> Geocoder. If Mongoid isn't loaded when Geocoder is initialized, Geocoder will not load support for Mongoid.</p>
+
+<h3>
+<a name="user-content-activerecord-1" class="anchor" href="#activerecord-1"><span class="octicon octicon-link"></span></a>ActiveRecord</h3>
+
+<p>A lot of debugging time can be saved by understanding how Geocoder works with ActiveRecord. When you use the <code>near</code> scope or the <code>nearbys</code> method of a geocoded object, Geocoder creates an ActiveModel::Relation object which adds some attributes (eg: distance, bearing) to the SELECT clause. It also adds a condition to the WHERE clause to check that distance is within the given radius. Because the SELECT clause is modified, anything else that modifies the SELECT clause may produce strange results, for example:</p>
+
+<ul>
+<li>using the <code>pluck</code> method (selects only a single column)</li>
+<li>specifying another model through <code>includes</code> (selects columns from other tables)</li>
+</ul><h3>
+<a name="user-content-unexpected-responses-from-geocoding-services" class="anchor" href="#unexpected-responses-from-geocoding-services"><span class="octicon octicon-link"></span></a>Unexpected Responses from Geocoding Services</h3>
+
+<p>Take a look at the server's raw JSON response. You can do this by getting the request URL in an app console:</p>
+
+<pre><code>Geocoder::Lookup.get(:google).query_url(Geocoder::Query.new("..."))
+</code></pre>
+
+<p>Replace <code>:google</code> with the lookup you are using and replace <code>...</code> with the address you are trying to geocode. Then visit the returned URL in your web browser. Often the API will return an error message that helps you resolve the problem. If, after reading the raw response, you believe there is a problem with Geocoder, please post an issue and include both the URL and raw response body.</p>
+
+<h2>
+<a name="user-content-reporting-issues" class="anchor" href="#reporting-issues"><span class="octicon octicon-link"></span></a>Reporting Issues</h2>
+
+<p>When reporting an issue, please list the version of Geocoder you are using and any relevant information about your application (Rails version, database type and version, etc). Also avoid vague language like "it doesn't work." Please describe as specifically as you can what behavior your are actually seeing (eg: an error message? a nil return value?).</p>
+
+<h2>
+<a name="user-content-known-issue" class="anchor" href="#known-issue"><span class="octicon octicon-link"></span></a>Known Issue</h2>
+
+<p>You cannot use the <code>near</code> scope with another scope that provides an <code>includes</code> option because the <code>SELECT</code> clause generated by <code>near</code> will overwrite it (or vice versa).</p>
+
+<p>Instead of using <code>includes</code> to reduce the number of database queries, try using <code>joins</code> with either the <code>:select</code> option or a call to <code>preload</code>. For example:</p>
+
+<pre><code># Pass a :select option to the near scope to get the columns you want.
+# Instead of City.near(...).includes(:venues), try:
+City.near("Omaha, NE", 20, :select =&gt; "cities.*, venues.*").joins(:venues)
+
+# This preload call will normally trigger two queries regardless of the
+# number of results; one query on hotels, and one query on administrators.
+# Instead of Hotel.near(...).includes(:administrator), try:
+Hotel.near("London, UK", 50).joins(:administrator).preload(:administrator)
+</code></pre>
+
+<p>If anyone has a more elegant solution to this problem I am very interested in seeing it.</p>
+
+<h2>
+<a name="user-content-contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Contributions are welcome via pull requests on Github. Please respect the following guidelines:</p>
+
+<ul>
+<li>Each pull request should implement ONE feature or bugfix. If you want to add or fix more than one thing, submit more than one pull request.</li>
+<li>Do not commit changes to files that are irrelevant to your feature or bugfix (eg: <code>.gitignore</code>).</li>
+<li>Do not add dependencies on other gems.</li>
+<li>Do not add unnecessary <code>require</code> statements which could cause LoadErrors on certain systems.</li>
+<li>Remember: Geocoder needs to run outside of Rails. Don't assume things like ActiveSupport are available.</li>
+<li>Do not add to base configuration options; instead document required lookup-specific options in the README.</li>
+<li>Be willing to accept criticism and work on improving your code; Geocoder is used by thousands of developers and care must be taken not to introduce bugs.</li>
+<li>Be aware that the pull request review process is not immediate, and is generally proportional to the size of the pull request.</li>
+</ul><p>Copyright (c) 2009-12 Alex Reisner, released under the MIT license</p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.06127s from github-fe121-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+
