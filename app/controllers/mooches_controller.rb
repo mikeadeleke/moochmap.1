@@ -37,7 +37,7 @@ class MoochesController < ApplicationController
 
     respond_to do |format|
       if @mooch.save
-        format.html { redirect_to @mooch, notice: 'Mooch was successfully created.' }
+        format.html { redirect_to @mooch, notice: 'We knew you were a mooch. Everyone knows you are a mooch :)' }
         format.json { render action: 'show', status: :created, location: @mooch }
       else
         format.html { render action: 'new' }
@@ -51,7 +51,7 @@ class MoochesController < ApplicationController
   def update
     respond_to do |format|
       if @mooch.update(mooch_params)
-        format.html { redirect_to @mooch, notice: 'Mooch was successfully updated.' }
+        format.html { redirect_to @mooch, notice: 'We got that mooch on updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

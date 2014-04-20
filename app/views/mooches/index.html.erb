@@ -2,6 +2,7 @@
   <% @mooches.each do |mooch| %>
     <li><%= link_to image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small"), @user %> <%= mooch.description %></li>
     <li><%= time_ago_in_words(l mooch.created_at) %> ago</li>
+    <li><%= mooch.location %></li>
   <% end %>
 </ul>
 

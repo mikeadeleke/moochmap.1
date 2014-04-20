@@ -1,11 +1,21 @@
+<script type="text/javascript">
+  navigator.geolocation.getCurrentPosition(GetLocation);
+  function GetLocation(location) {
+      console.log(location.coords.latitude);
+      console.log(location.coords.longitude);
+      document.getElementById('latitude').value = location.coords.latitude;
+      document.getElementById('longitude').value = location.coords.longitude;
+  }
+</script>
+
 <%= form_for @mooch, :html => { :class => 'form-horizontal form-model' } do |f| %>
   <div class="form-group">
     <%= f.label :description, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
       <%= f.text_field :description, :class => 'text-field form-control' %>
     </div>
-    <%= f.hidden_field :latitude, id: "latitude" %>
-    <%= f.hidden_field :longitude, id: "longitude" %>
+    <%= f.hidden_field :latitude, id: "latitude", value: "document.getElementById('latitude').value" %>
+    <%= f.hidden_field :longitude, id: "longitude", value: "document.getElementById('longitude').value" %>
   </div>
 
   <div class="form-group">
